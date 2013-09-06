@@ -1,0 +1,1252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GOPMP</title>
+<script type="text/javascript" src="planconfig.php_files/common.js"></script>
+<link href="planconfig.php_files/gopmp.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+<!--
+var timeout = 500;
+var closetimer= 0;
+var ddmenuitem = 0;
+ready(function(){
+	li=findtags('li','',$('menu'));
+	for(var i=0;i<li.length;i++){
+		ul=findtags('ul','',li[i]);
+		if(ul.length>0){
+			li[i].onmouseover=function(){
+				mcancelclosetime();
+				if(ddmenuitem) ddmenuitem.style.display='none';
+				ul=findtags('ul','',this);
+				ddmenuitem=ul[0];
+				ddmenuitem.style.display='block';
+				_attachEvent(document,'click',mclose);
+				lis=findtags('li','',ddmenuitem);
+				w=0;
+				for(var j=0,jl=lis.length;j<jl;j++)w+=12*(lis[j].firstChild.innerHTML.length)+18;
+				r=getPoint(this)[0]-getPoint($('menu'))[0]+w;
+				l=(50-w/2);
+				if(r>737)l=730-r;
+				ul[0].style.width=w+"px";
+				ul[0].style.left=l+"px";
+			}
+			li[i].onmouseout=function(){mclosetime();}
+		}
+	}
+	li=findtags('li','',$('ywrw'));
+	for(var i=0;i<li.length;i++){
+		ul=findtags('ul','',li[i]);
+		if(ul.length>0){
+			li[i].onmouseover=function(){mcancelclosetime();if(ddmenuitem) ddmenuitem.style.display='none';ul=findtags('ul','',this);ddmenuitem=ul[0];ddmenuitem.style.display='block';}
+			li[i].onmouseout=function(){mclosetime();}
+		}
+	}
+});
+function mclose(){
+	if(ddmenuitem) ddmenuitem.style.display='none';
+	_detachEvent(document,'click',mclose);
+}
+function mclosetime(){
+	closetimer = window.setTimeout(mclose, timeout);
+}
+function mcancelclosetime(){
+	if(closetimer){
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+//-->
+</script>
+</head>
+<body>
+<div class="top1">
+  <div>
+    <span class="left">您好，<span id="loginusername">windyqiu</span>  &nbsp;【<a href="http://gopmp.cm.com/logout.php" style="color:#f00;">退出</a>】</span>
+    <span class="right">
+      <ul id="ywrw">
+        <li><a class="head_home_link" href="http://gopmp.cm.com/">首页</a></li>
+        <li><a class="head_yw_link" href="#"><em>我的业务</em></a>
+          <ul><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=1">QQ仙灵(H2)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=2">QQ封神记(QQ封神记)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=3">糖之物语(糖果世界)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=4">QQ乐团(Rock Planet)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=5">夺宝船长(Black Flag)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=6">乐斗派(乐斗派)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=7">QQ爱之花园(QQ爱之花园)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=8">花儿对对碰(Bloomy)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=9">QQ黄金矿工(QQ黄金矿工)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=10">圣犬帕拉(圣犬帕拉)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=11">斗战神(斗战神)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=12">炫舞2(炫舞2)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=13">球球堂(DOD)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=14">魔偶给我冲(精灵星球)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=15">疾风之刃(Apple)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=16">刀剑2(刀剑2)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=17">九界(九界)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=18">就要K歌(就要K歌)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=19">逆战(火力突击)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=20">枪神纪(TPS)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=21">天刹(修罗sura)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=22">炫斗之王(炫斗之王)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=23">烈焰行动(烈焰行动)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=24">生化战场(WOZ)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=25">NBA2K(NBA2K)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=26">轩辕传奇(轩辕传奇)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=27">战争前线(战争前线)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=28">DGAME(DGAME)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=29">宠物牧场(DWeb1)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=30">机甲旋风(AI)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=31">将魂(将魂)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=32">Q游记(米亚之光)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=33">文明争霸(HUG)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=34">星之物语(星之物语)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=35">纵横九州(八阵图)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=36">QQ特工(QQ特工)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=37">QQ水浒(QQ水浒)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=38">Q宠大乐斗(大乐斗)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=39">王朝霸域(王朝霸域)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=40">九州三国(九州三国)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=41">AppleJuice(AppleJuice)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=42">天堂2(天堂2)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=43">上古世纪(上古世纪)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=44">QQ九仙(QQ九仙)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=45">星魂传说(星魂传说)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=46">功夫西游(GFXY)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=47">魔幻大陆(魔幻大陆)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=48">夜店之王(夜店之王)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=49">弹道轨迹(TNT)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=50">洛克王国(洛克)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=51">大乐斗II(大乐斗II)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=52">英雄岛(英雄岛)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=53">QQ华夏(QQ华夏)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=54">QQ宝贝(宝贝)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=55">QQ仙境(QQ仙境)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=56">三国了没(热血三国杀)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=57">QQ天堂岛(天堂岛)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=58">大明龙权(大明)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=59">QQ飞车(飞车)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=60">CODOL(CODO)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=61">Fashion Avenue(Fashion Avenue)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=62">RGAME(RGAME)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=63">QSGAME(QSGAME)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=64">超级明星(超级明星)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=65">飞行战记(NX)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=66">剑灵(剑灵)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=67">万王之王3(万王之王3)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=68">御龙在天(御龙在天)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=69">Bumping Bears(Bears)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=70">灭世(灭世)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=71">三国来了(三国来了)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=72">3366(3366)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=73">C9(C9)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=74">QQ宠物企鹅(企鹅)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=75">QQ三国(QQ三国)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=76">QQ堂(QQ堂)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=77">QQ西游(QQ西游)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=78">QQ仙侠传(仙侠传)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=79">小熊梦工厂(小熊)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=80">QQ炫舞(炫舞)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=81">QQ音速(音速)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=82">QQ游戏(QQ游戏)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=83">QT语音(QTalk)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=84">宝石总动员(QQ宝石)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=85">楚河汉界(楚河汉界)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=86">穿越火线(CF)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=87">地下城与勇士(DNF)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=88">烽火战国(烽火)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=89">欢乐王国(欢乐王国)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=90">幻想(FO)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=91">幻想世界(幻世)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=92">绿色征途(LSZT)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=93">摩登城市(摩登城市)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=94">七雄争霸(七雄)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=95">三国塔防-魏传(三国塔防-魏传)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=96">丝路英雄(丝路)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=97">天堂(天堂)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=98">小白大作战(小白)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=99">寻侠-独代(寻侠)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=100">寻仙(寻仙)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=101">英雄联盟(LOL)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=102">战地之王(AVA)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=103">自由幻想(FFO)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=104">Cannon Jump(Jump)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=105">Top Girl(Top Girl)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=106">Tower Town(Tower Town)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=107">画皮II(画皮II)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=108">机器人崛起(Robot Rising)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=109">Lotus(Lotus)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=110">MHFC(MHFC)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=111">洛克ios版(洛克ios版)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=112">手机Q宠大乐斗(手机乐斗)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=113">自由足球(自由足球)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=114">CafeLife(Cafelife)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=115">ParadiseLife(ParadiseLife)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=116">万神之怒COG繁体(COG繁体中文)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=117">动物大爆炸(zoo)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=118">华夏1(华夏1)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=119">霸三国online(OGAME)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=120">QQ游戏社区(QQYXSQ)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=121">Elgard(Elgard)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=122">萌仙(萌仙)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=123">神魔录(神魔录)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=124">逐鹿中原(ZLZY)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=125">微胖(微胖)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=126">江湖笑(jhx)</a></li></ul>        </li>
+        <li><a class="head_rw_link" href="#"><em>我的任务</em></a>
+          <ul>
+            <li><a href="http://gopmp.cm.com/myschedule.php">我的待办</a></li>
+            <li><a href="http://gopmp.cm.com/myfinish.php">我的已办</a></li>
+            <li><a href="http://gopmp.cm.com/project.php?showtype=myschedule">重点项目待办</a></li>
+          </ul>
+        </li>
+        <li><a class="head_zs_link" href="#">知识库</a></li>
+        <li><a class="head_fw_link" href="#">服务帮助</a></li>
+        <li><a class="head_lx_link" target="_blank" href="http://ce.oa.com/GOPMP">联系我们</a></li>
+        <li><a class="head_xt_link" href="#">系统配置</a>
+          <ul><li><a href="http://gopmp.cm.com/phases.php">阶段管理</a></li><li><a href="http://gopmp.cm.com/types.php">任务类型</a></li><li><a href="http://gopmp.cm.com/operations.php">业务类型</a></li><li><a href="http://gopmp.cm.com/tasks.php">任务列表</a></li><li><a href="http://gopmp.cm.com/taskstype.php">任务分类</a></li><li><a href="http://gopmp.cm.com/roles.php">角色管理</a></li><li><a href="http://gopmp.cm.com/pages.php">页面管理</a></li><li><a href="http://gopmp.cm.com/permissions.php">操作管理</a></li><li><a href="http://gopmp.cm.com/rolepageperm.php">权限管理</a></li><li><a href="http://gopmp.cm.com/expert.php">专家团</a></li><li><a href="http://gopmp.cm.com/groupmanager.php">业务小组</a></li><li><a href="http://gopmp.cm.com/msg.php">系统信息</a></li><li><a href="http://gopmp.cm.com/qalist.php">QA列表</a></li><li><a href="http://gopmp.cm.com/resourcetype.php">资源类型</a></li><li><a href="http://gopmp.cm.com/projectstep.php">项目级别</a></li><li><a href="http://gopmp.cm.com/projecttype.php">项目类型</a></li><li><a href="http://gopmp.cm.com/project_back.php">改回草稿</a></li><li><a href="http://gopmp.cm.com/project_gm.php">项目成员</a></li><li><a href="http://gopmp.cm.com/logs.php">日志查看</a></li></ul>        </li><li><a class="head_xt_link" href="#">职能化后台</a>
+          <ul><li><a href="http://gopmp.cm.com/apply_fields.php">业务字段</a></li><li><a href="http://gopmp.cm.com/accessinfo.php">服务列表</a></li><li><a href="http://gopmp.cm.com/apply_users.php">职能化用户</a></li></ul>        </li>      </ul>
+    </span>
+  </div>
+</div>
+<div class="top2">
+  <div class="top2_1">
+    <div class="head_logo left"><a href="http://gopmp.cm.com/" alt="首页" title="首页"></a></div>
+    <div class="head_nav right">
+      <div class="navtopge"></div>
+      <div class="navmenu">
+        <ul id="menu">
+          <li class="noborder"><a href="http://gopmp.cm.com/newbusiness.php">新建业务</a></li><li><a href="#">业务列表</a><ul><li><a href="http://gopmp.cm.com/allBusinesses.php">业务总览</a></li><li><a href="http://gopmp.cm.com/businesses.php">业务信息</a></li><li><a href="http://gopmp.cm.com/rights.php">项目成员</a></li></ul></li><li><a href="http://gopmp.cm.com/planconfig.php">计划管理</a></li><li><a href="#">我的任务</a><ul><li><a href="http://gopmp.cm.com/myschedule.php">我的待办</a></li><li><a href="http://gopmp.cm.com/myfinish.php">我的已办</a></li><li><a href="http://gopmp.cm.com/project.php?showtype=myschedule">重点项目待办任务</a></li></ul></li><li><a href="http://gopmp.cm.com/risk.php">风险管理</a></li><li><a href="http://gopmp.cm.com/report.php">发送报告</a></li><li><a href="http://gopmp.cm.com/planview.php">进度视图</a></li><li><a href="http://gopmp.cm.com/apply_list.php">职能化接入</a></li>        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="top2_3">当前位置：计划管理<span style=" font-weight:bold;"></span></div>
+</div>
+<div class="contentbody">
+<link href="planconfig.php_files/zdsjs.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="planconfig.php_files/zdsinfobox.js"></script>
+<script type="text/javascript" src="planconfig.php_files/zdsCalendar.js"></script>
+<script type="text/javascript" src="planconfig.php_files/zdsmsgbox.js"></script>
+<style type="text/css">
+<!--
+.showtime,.showname,.noname{ float:left; width:69px;}
+.showtime{ width:92px; text-align:center;}
+.noname em{ color:#00F;}
+.showimg,.show_img2{ float:right; display:none; cursor:pointer;}
+.show_img{ cursor:pointer;}
+select{ padding:0px;}
+.imgbox{ padding:0 4px 0 0;}
+.noimgbox{ padding:0 14px 0 0;}
+.col_exp{ cursor:pointer;}
+.sponsor_noedit,.principal_noedit{ text-indent:15px;}
+.noedit{ text-indent:5px;}
+.hints{ color:#999;}
+.msgTitle a{ color:#f00; text-decoration:underline; font-weight:normal;}
+.msgTitle a:hover{ color:#ae700f;}
+
+
+.center_box{ width:939px; border:1px solid #BCC7C3; margin:0 auto; overflow:hidden;}
+.tab_button{ background-color:#F3FBEA; border-bottom:1px solid #BCC7C3; height:29px; line-height:29px;}
+.center_box .tab_button a { border-right:1px solid #BCC7C3; float:left; height:29px; line-height:30px; text-align:center; width:120px !important;}
+.center_box .tab_button a.select { background-color:#FFF; border-bottom:1px solid #FFF; font-size:14px; font-weight:bold;}
+.login_page_bg{ padding:20px;}
+.table{ width:100%;}
+
+-->
+</style>
+<form name="forms" id="forms" action="planconfig.php?action=del&amp;id=72" method="post">
+  <div class="page_sel">
+    <p>请选择新业务: <select name="bid" id="bid" onchange="location.href='planconfig.php?action=showlist&amp;id='+this.value"><option value="0">-- 请选择业务 --</option><option value="72" selected="selected">3366(3366)</option><option value="41">AppleJuice(AppleJuice)</option><option value="69">Bumping Bears(Bears)</option><option value="73">C9(C9)</option><option value="114">CafeLife(Cafelife)</option><option value="104">Cannon Jump(Jump)</option><option value="60">CODOL(CODO)</option><option value="28">DGAME(DGAME)</option><option value="121">Elgard(Elgard)</option><option value="61">Fashion Avenue(Fashion Avenue)</option><option value="109">Lotus(Lotus)</option><option value="110">MHFC(MHFC)</option><option value="25">NBA2K(NBA2K)</option><option value="115">ParadiseLife(ParadiseLife)</option><option value="7">QQ爱之花园(QQ爱之花园)</option><option value="54">QQ宝贝(宝贝)</option><option value="74">QQ宠物企鹅(企鹅)</option><option value="59">QQ飞车(飞车)</option><option value="2">QQ封神记(QQ封神记)</option><option value="53">QQ华夏(QQ华夏)</option><option value="9">QQ黄金矿工(QQ黄金矿工)</option><option value="44">QQ九仙(QQ九仙)</option><option value="4">QQ乐团(Rock Planet)</option><option value="75">QQ三国(QQ三国)</option><option value="37">QQ水浒(QQ水浒)</option><option value="76">QQ堂(QQ堂)</option><option value="36">QQ特工(QQ特工)</option><option value="57">QQ天堂岛(天堂岛)</option><option value="77">QQ西游(QQ西游)</option><option value="55">QQ仙境(QQ仙境)</option><option value="1">QQ仙灵(H2)</option><option value="78">QQ仙侠传(仙侠传)</option><option value="80">QQ炫舞(炫舞)</option><option value="81">QQ音速(音速)</option><option value="82">QQ游戏(QQ游戏)</option><option value="120">QQ游戏社区(QQYXSQ)</option><option value="63">QSGAME(QSGAME)</option><option value="83">QT语音(QTalk)</option><option value="38">Q宠大乐斗(大乐斗)</option><option value="32">Q游记(米亚之光)</option><option value="62">RGAME(RGAME)</option><option value="105">Top Girl(Top Girl)</option><option value="106">Tower Town(Tower Town)</option><option value="119">霸三国online(OGAME)</option><option value="84">宝石总动员(QQ宝石)</option><option value="64">超级明星(超级明星)</option><option value="29">宠物牧场(DWeb1)</option><option value="85">楚河汉界(楚河汉界)</option><option value="86">穿越火线(CF)</option><option value="51">大乐斗II(大乐斗II)</option><option value="58">大明龙权(大明)</option><option value="49">弹道轨迹(TNT)</option><option value="16">刀剑2(刀剑2)</option><option value="87">地下城与勇士(DNF)</option><option value="117">动物大爆炸(zoo)</option><option value="11">斗战神(斗战神)</option><option value="5">夺宝船长(Black Flag)</option><option value="65">飞行战记(NX)</option><option value="88">烽火战国(烽火)</option><option value="46">功夫西游(GFXY)</option><option value="8">花儿对对碰(Bloomy)</option><option value="118">华夏1(华夏1)</option><option value="107">画皮II(画皮II)</option><option value="89">欢乐王国(欢乐王国)</option><option value="90">幻想(FO)</option><option value="91">幻想世界(幻世)</option><option value="30">机甲旋风(AI)</option><option value="108">机器人崛起(Robot Rising)</option><option value="15">疾风之刃(Apple)</option><option value="66">剑灵(剑灵)</option><option value="126">江湖笑(jhx)</option><option value="31">将魂(将魂)</option><option value="17">九界(九界)</option><option value="40">九州三国(九州三国)</option><option value="18">就要K歌(就要K歌)</option><option value="6">乐斗派(乐斗派)</option><option value="23">烈焰行动(烈焰行动)</option><option value="92">绿色征途(LSZT)</option><option value="111">洛克ios版(洛克ios版)</option><option value="50">洛克王国(洛克)</option><option value="122">萌仙(萌仙)</option><option value="70">灭世(灭世)</option><option value="93">摩登城市(摩登城市)</option><option value="47">魔幻大陆(魔幻大陆)</option><option value="14">魔偶给我冲(精灵星球)</option><option value="19">逆战(火力突击)</option><option value="94">七雄争霸(七雄)</option><option value="20">枪神纪(TPS)</option><option value="13">球球堂(DOD)</option><option value="71">三国来了(三国来了)</option><option value="56">三国了没(热血三国杀)</option><option value="95">三国塔防-魏传(三国塔防-魏传)</option><option value="43">上古世纪(上古世纪)</option><option value="123">神魔录(神魔录)</option><option value="24">生化战场(WOZ)</option><option value="10">圣犬帕拉(圣犬帕拉)</option><option value="112">手机Q宠大乐斗(手机乐斗)</option><option value="96">丝路英雄(丝路)</option><option value="3">糖之物语(糖果世界)</option><option value="21">天刹(修罗sura)</option><option value="97">天堂(天堂)</option><option value="42">天堂2(天堂2)</option><option value="116">万神之怒COG繁体(COG繁体中文)</option><option value="67">万王之王3(万王之王3)</option><option value="39">王朝霸域(王朝霸域)</option><option value="125">微胖(微胖)</option><option value="33">文明争霸(HUG)</option><option value="98">小白大作战(小白)</option><option value="79">小熊梦工厂(小熊)</option><option value="45">星魂传说(星魂传说)</option><option value="34">星之物语(星之物语)</option><option value="26">轩辕传奇(轩辕传奇)</option><option value="22">炫斗之王(炫斗之王)</option><option value="12">炫舞2(炫舞2)</option><option value="99">寻侠-独代(寻侠)</option><option value="100">寻仙(寻仙)</option><option value="48">夜店之王(夜店之王)</option><option value="52">英雄岛(英雄岛)</option><option value="101">英雄联盟(LOL)</option><option value="68">御龙在天(御龙在天)</option><option value="102">战地之王(AVA)</option><option value="27">战争前线(战争前线)</option><option value="124">逐鹿中原(ZLZY)</option><option value="103">自由幻想(FFO)</option><option value="113">自由足球(自由足球)</option><option value="35">纵横九州(八阵图)</option></select> &nbsp; &nbsp; &nbsp; 
+    <!--<select name="taskstype" id="taskstype" onchange="location.href='planconfig.php?action=showlist&id='+$('bid').value+'&taskstype='+this.value"><option value="0">-- 请选择任务分类 --</option><option value="1">运营管理</option><option value="2">运营开发</option><option value="3">运营服务</option><option value="4">流程服务</option><option value="5">test</option></select>--></p>
+    <p>运营阶段：公测</p>  </div>
+    <div class="center_box">
+    <div class="tab_button">
+      <a id="but02" href="javascript:setType(1);">运营管理</a><a id="but02" href="javascript:setType(2);">运营开发</a><a id="but02" href="javascript:setType(3);">运营服务</a><a id="but02" href="javascript:setType(4);">流程服务</a><a id="but02" href="javascript:setType(5);">test</a>      <a id="but01" href="javascript:setType(0);" class="select">全部任务</a>
+    </div>
+    <div class="login_page_bg">
+      <table class="table" id="mytable" align="center" border="1" cellpadding="5" cellspacing="0">
+        <tbody><tr class="head">
+          <td width="7%">运营阶段</td>
+          <td width="28%">任务名</td>
+          <td width="11%">计划开始时间</td>
+          <td width="11%">计划完成时间</td>
+          <td width="14%">发起人</td>
+          <td width="14%">负责人</td>
+          <td width="8%">任务类型</td>
+          <td>操作</td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+          <td align="center">前期接触</td>          <td><span class="noimgbox"></span>未接业务信息获取</td>
+          <td class="starttime" id="t_starttime_3098"><span class="showtime" id="s_starttime_3098"><input id="i_starttime_3098" value="2013-03-07" style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3098',function(d){return setmyDate(1,3098,d);},'',null,null,'','',$('i_endtime_3098').value);" class="calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3098"><span class="showtime" id="s_endtime_3098"><input id="i_endtime_3098" value="2013-03-07" style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3098',function(d){return setmyDate(2,3098,d);},'',null,null,'',$('i_starttime_3098').value,'');" class="calendar" type="text"></span></td>
+          <td id="t_sponsor_3098">
+          <span class="noname" id="s_sponsor_3098"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=1#users_1">请填写运管专家</a></span>          </td>
+          <td id="t_principal_3098">
+          <span class="noname" id="s_principal_3098"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=1#users_1">请填写运管专家</a></span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+          <td rowspan="12" align="center">接入准备</td>          <td><span class="noimgbox"></span>运营风险评估</td>
+          <td class="starttime" id="t_starttime_3101"><span class="showtime" id="s_starttime_3101"><input id="i_starttime_3101" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3101',function(d){return setmyDate(1,3101,d);},'',null,null,'','',$('i_endtime_3101').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3101"><span class="showtime" id="s_endtime_3101"><input id="i_endtime_3101" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3101',function(d){return setmyDate(2,3101,d);},'',null,null,'',$('i_starttime_3101').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3101">
+          <span class="noname" id="s_sponsor_3101"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=1#users_1">请填写运管专家</a></span>          </td>
+          <td id="t_principal_3101">
+          <span class="noname" id="s_principal_3101"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=1#users_1">请填写运管专家</a></span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运维人员选拔</td>
+          <td class="starttime" id="t_starttime_3102"><span class="showtime" id="s_starttime_3102"><input id="i_starttime_3102" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3102',function(d){return setmyDate(1,3102,d);},'',null,null,'','',$('i_endtime_3102').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3102"><span class="showtime" id="s_endtime_3102"><input id="i_endtime_3102" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3102',function(d){return setmyDate(2,3102,d);},'',null,null,'',$('i_starttime_3102').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3102">
+          <span class="noname" id="s_sponsor_3102">willstarli</span>          </td>
+          <td id="t_principal_3102">
+          <span class="noname" id="s_principal_3102"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运营开发服务及整体解决方案宣导</td>
+          <td class="starttime" id="t_starttime_3118"><span class="showtime" id="s_starttime_3118"><input id="i_starttime_3118" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3118',function(d){return setmyDate(1,3118,d);},'',null,null,'','',$('i_endtime_3118').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3118"><span class="showtime" id="s_endtime_3118"><input id="i_endtime_3118" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3118',function(d){return setmyDate(2,3118,d);},'',null,null,'',$('i_starttime_3118').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3118">
+          <span class="noname" id="s_sponsor_3118">jackyyin</span>          </td>
+          <td id="t_principal_3118">
+          <span class="noname" id="s_principal_3118">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>官网宣传站建设</td>
+          <td class="starttime" id="t_starttime_3119"><span class="showtime" id="s_starttime_3119"><input id="i_starttime_3119" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3119',function(d){return setmyDate(1,3119,d);},'',null,null,'','',$('i_endtime_3119').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3119"><span class="showtime" id="s_endtime_3119"><input id="i_endtime_3119" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3119',function(d){return setmyDate(2,3119,d);},'',null,null,'',$('i_starttime_3119').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3119">
+          <span class="noname" id="s_sponsor_3119">jackyyin</span>          </td>
+          <td id="t_principal_3119">
+          <span class="noname" id="s_principal_3119">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>公共组件接入：TLOG</td>
+          <td class="starttime" id="t_starttime_3120"><span class="showtime" id="s_starttime_3120"><input id="i_starttime_3120" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3120',function(d){return setmyDate(1,3120,d);},'',null,null,'','',$('i_endtime_3120').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3120"><span class="showtime" id="s_endtime_3120"><input id="i_endtime_3120" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3120',function(d){return setmyDate(2,3120,d);},'',null,null,'',$('i_starttime_3120').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3120">
+          <span class="noname" id="s_sponsor_3120">willstarli</span>          </td>
+          <td id="t_principal_3120">
+          <span class="noname" id="s_principal_3120">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>项目Kickoff</td>
+          <td class="starttime" id="t_starttime_3103"><span class="showtime" id="s_starttime_3103"><input id="i_starttime_3103" value="2013-03-08" style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3103',function(d){return setmyDate(1,3103,d);},'',null,null,'','',$('i_endtime_3103').value);" class="calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3103"><span class="showtime" id="s_endtime_3103"><input id="i_endtime_3103" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3103',function(d){return setmyDate(2,3103,d);},'',null,null,'',$('i_starttime_3103').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3103">
+          <span class="noname" id="s_sponsor_3103"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3103">
+          <span class="noname" id="s_principal_3103">willstarli</span>          </td>
+          <td align="center">评审活动类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>公共组件接入：TCLS</td>
+          <td class="starttime" id="t_starttime_3104"><span class="showtime" id="s_starttime_3104"><input id="i_starttime_3104" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3104',function(d){return setmyDate(1,3104,d);},'',null,null,'','',$('i_endtime_3104').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3104"><span class="showtime" id="s_endtime_3104"><input id="i_endtime_3104" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3104',function(d){return setmyDate(2,3104,d);},'',null,null,'',$('i_starttime_3104').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3104">
+          <span class="noname" id="s_sponsor_3104">willstarli</span>          </td>
+          <td id="t_principal_3104" class="principal">
+          <span class="showname" id="s_principal_3104">alvinzheng</span><input style="padding: 0px; float: right;" value="更新" id="b_principal_3104" type="button">          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>公共组件接入：自建CDN</td>
+          <td class="starttime" id="t_starttime_3136"><span class="showtime" id="s_starttime_3136"><input id="i_starttime_3136" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3136',function(d){return setmyDate(1,3136,d);},'',null,null,'','',$('i_endtime_3136').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3136"><span class="showtime" id="s_endtime_3136"><input id="i_endtime_3136" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3136',function(d){return setmyDate(2,3136,d);},'',null,null,'',$('i_starttime_3136').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3136">
+          <span class="noname" id="s_sponsor_3136">willstarli</span>          </td>
+          <td id="t_principal_3136">
+          <span class="noname" id="s_principal_3136">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>公共组件接入：中央控制工具</td>
+          <td class="starttime" id="t_starttime_3138"><span class="showtime" id="s_starttime_3138"><input id="i_starttime_3138" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3138',function(d){return setmyDate(1,3138,d);},'',null,null,'','',$('i_endtime_3138').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3138"><span class="showtime" id="s_endtime_3138"><input id="i_endtime_3138" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3138',function(d){return setmyDate(2,3138,d);},'',null,null,'',$('i_starttime_3138').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3138">
+          <span class="noname" id="s_sponsor_3138">willstarli</span>          </td>
+          <td id="t_principal_3138">
+          <span class="noname" id="s_principal_3138">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>公共组件接入：屏蔽字（敏感词）</td>
+          <td class="starttime" id="t_starttime_3139"><span class="showtime" id="s_starttime_3139"><input id="i_starttime_3139" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3139',function(d){return setmyDate(1,3139,d);},'',null,null,'','',$('i_endtime_3139').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3139"><span class="showtime" id="s_endtime_3139"><input id="i_endtime_3139" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3139',function(d){return setmyDate(2,3139,d);},'',null,null,'',$('i_starttime_3139').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3139">
+          <span class="noname" id="s_sponsor_3139">willstarli</span>          </td>
+          <td id="t_principal_3139">
+          <span class="noname" id="s_principal_3139">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>支撑计划评审和发布</td>
+          <td class="starttime" id="t_starttime_3099"><span class="showtime" id="s_starttime_3099"><input id="i_starttime_3099" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3099',function(d){return setmyDate(1,3099,d);},'',null,null,'','',$('i_endtime_3099').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3099"><span class="showtime" id="s_endtime_3099"><input id="i_endtime_3099" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3099',function(d){return setmyDate(2,3099,d);},'',null,null,'',$('i_starttime_3099').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3099">
+          <span class="noname" id="s_sponsor_3099">willstarli</span>          </td>
+          <td id="t_principal_3099">
+          <span class="noname" id="s_principal_3099">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>可运营规范推行</td>
+          <td class="starttime" id="t_starttime_3100"><span class="showtime" id="s_starttime_3100"><input id="i_starttime_3100" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3100',function(d){return setmyDate(1,3100,d);},'',null,null,'','',$('i_endtime_3100').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3100"><span class="showtime" id="s_endtime_3100"><input id="i_endtime_3100" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3100',function(d){return setmyDate(2,3100,d);},'',null,null,'',$('i_starttime_3100').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3100">
+          <span class="noname" id="s_sponsor_3100">willstarli</span>          </td>
+          <td id="t_principal_3100">
+          <span class="noname" id="s_principal_3100">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+          <td rowspan="15" align="center">封测</td>          <td><span class="imgbox"><img src="planconfig.php_files/collapse.gif" class="col_exp" onclick="collapse();" rval="expand_14_2_14"></span>运营环境设计</td>
+          <td id="t_starttime_3107">&nbsp;</td>
+          <td id="t_endtime_3107">&nbsp;</td>
+          <td id="t_sponsor_3107">
+          &nbsp;          </td>
+          <td id="t_principal_3107">
+          &nbsp;          </td>
+          <td align="center"></td>
+          <td align="center"></td>
+        </tr>
+                <tr style="display: none;" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td> &nbsp; &nbsp; &nbsp; &nbsp;<span class="noimgbox"></span>运营环境搭建</td>
+          <td class="starttime" id="t_starttime_3151"><span class="showtime" id="s_starttime_3151"><input id="i_starttime_3151" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3151',function(d){return setmyDate(1,3151,d);},'',null,null,'','',$('i_endtime_3151').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3151"><span class="showtime" id="s_endtime_3151"><input id="i_endtime_3151" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3151',function(d){return setmyDate(2,3151,d);},'',null,null,'',$('i_starttime_3151').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3151">
+          <span class="noname" id="s_sponsor_3151">willstarli</span>          </td>
+          <td id="t_principal_3151" class="principal">
+          <span class="showname" id="s_principal_3151">alvinzheng</span><input style="padding: 0px; float: right;" value="更新" id="b_principal_3151" type="button">          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr style="display: none;" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td> &nbsp; &nbsp; &nbsp; &nbsp;<span class="noimgbox"></span>运营环境设计评审</td>
+          <td class="starttime" id="t_starttime_3159"><span class="showtime" id="s_starttime_3159"><input id="i_starttime_3159" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3159',function(d){return setmyDate(1,3159,d);},'',null,null,'','',$('i_endtime_3159').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3159"><span class="showtime" id="s_endtime_3159"><input id="i_endtime_3159" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3159',function(d){return setmyDate(2,3159,d);},'',null,null,'',$('i_starttime_3159').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3159">
+          <span class="noname" id="s_sponsor_3159"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3159">
+          <span class="noname" id="s_principal_3159">willstarli</span>          </td>
+          <td align="center">评审活动类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运营接入评审</td>
+          <td class="starttime" id="t_starttime_3105"><span class="showtime" id="s_starttime_3105"><input id="i_starttime_3105" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3105',function(d){return setmyDate(1,3105,d);},'',null,null,'','',$('i_endtime_3105').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3105"><span class="showtime" id="s_endtime_3105"><input id="i_endtime_3105" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3105',function(d){return setmyDate(2,3105,d);},'',null,null,'',$('i_starttime_3105').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3105">
+          <span class="noname" id="s_sponsor_3105"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3105">
+          <span class="noname" id="s_principal_3105">willstarli</span>          </td>
+          <td align="center">评审活动类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运营开发详细解决方案宣导</td>
+          <td class="starttime" id="t_starttime_3121"><span class="showtime" id="s_starttime_3121"><input id="i_starttime_3121" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3121',function(d){return setmyDate(1,3121,d);},'',null,null,'','',$('i_endtime_3121').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3121"><span class="showtime" id="s_endtime_3121"><input id="i_endtime_3121" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3121',function(d){return setmyDate(2,3121,d);},'',null,null,'',$('i_starttime_3121').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3121">
+          <span class="noname" id="s_sponsor_3121">jackyyin</span>          </td>
+          <td id="t_principal_3121">
+          <span class="noname" id="s_principal_3121">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>支付接入准备</td>
+          <td class="starttime" id="t_starttime_3122"><span class="showtime" id="s_starttime_3122"><input id="i_starttime_3122" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3122',function(d){return setmyDate(1,3122,d);},'',null,null,'','',$('i_endtime_3122').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3122"><span class="showtime" id="s_endtime_3122"><input id="i_endtime_3122" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3122',function(d){return setmyDate(2,3122,d);},'',null,null,'',$('i_starttime_3122').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3122">
+          <span class="noname" id="s_sponsor_3122">jackyyin</span>          </td>
+          <td id="t_principal_3122">
+          <span class="noname" id="s_principal_3122">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>Tlog接入</td>
+          <td class="starttime" id="t_starttime_3123"><span class="showtime" id="s_starttime_3123"><input id="i_starttime_3123" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3123',function(d){return setmyDate(1,3123,d);},'',null,null,'','',$('i_endtime_3123').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3123"><span class="showtime" id="s_endtime_3123"><input id="i_endtime_3123" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3123',function(d){return setmyDate(2,3123,d);},'',null,null,'',$('i_starttime_3123').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3123">
+          <span class="noname" id="s_sponsor_3123">jackyyin</span>          </td>
+          <td id="t_principal_3123">
+          <span class="noname" id="s_principal_3123">jiyewang</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>IDIP接入</td>
+          <td class="starttime" id="t_starttime_3124"><span class="showtime" id="s_starttime_3124"><input id="i_starttime_3124" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3124',function(d){return setmyDate(1,3124,d);},'',null,null,'','',$('i_endtime_3124').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3124"><span class="showtime" id="s_endtime_3124"><input id="i_endtime_3124" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3124',function(d){return setmyDate(2,3124,d);},'',null,null,'',$('i_starttime_3124').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3124">
+          <span class="noname" id="s_sponsor_3124">jackyyin</span>          </td>
+          <td id="t_principal_3124">
+          <span class="noname" id="s_principal_3124">chaoszheng</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>经分系统封测版本开发</td>
+          <td class="starttime" id="t_starttime_3125"><span class="showtime" id="s_starttime_3125"><input id="i_starttime_3125" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3125',function(d){return setmyDate(1,3125,d);},'',null,null,'','',$('i_endtime_3125').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3125"><span class="showtime" id="s_endtime_3125"><input id="i_endtime_3125" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3125',function(d){return setmyDate(2,3125,d);},'',null,null,'',$('i_starttime_3125').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3125">
+          <span class="noname" id="s_sponsor_3125">jackyyin</span>          </td>
+          <td id="t_principal_3125">
+          <span class="noname" id="s_principal_3125">kindanjin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>官网封测站建设</td>
+          <td class="starttime" id="t_starttime_3126"><span class="showtime" id="s_starttime_3126"><input id="i_starttime_3126" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3126',function(d){return setmyDate(1,3126,d);},'',null,null,'','',$('i_endtime_3126').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3126"><span class="showtime" id="s_endtime_3126"><input id="i_endtime_3126" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3126',function(d){return setmyDate(2,3126,d);},'',null,null,'',$('i_starttime_3126').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3126">
+          <span class="noname" id="s_sponsor_3126">jackyyin</span>          </td>
+          <td id="t_principal_3126">
+          <span class="noname" id="s_principal_3126">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>营销活动开发</td>
+          <td class="starttime" id="t_starttime_3127"><span class="showtime" id="s_starttime_3127"><input id="i_starttime_3127" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3127',function(d){return setmyDate(1,3127,d);},'',null,null,'','',$('i_endtime_3127').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3127"><span class="showtime" id="s_endtime_3127"><input id="i_endtime_3127" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3127',function(d){return setmyDate(2,3127,d);},'',null,null,'',$('i_starttime_3127').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3127">
+          <span class="noname" id="s_sponsor_3127">jackyyin</span>          </td>
+          <td id="t_principal_3127">
+          <span class="noname" id="s_principal_3127">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>web商城接入准备</td>
+          <td class="starttime" id="t_starttime_3128"><span class="showtime" id="s_starttime_3128"><input id="i_starttime_3128" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3128',function(d){return setmyDate(1,3128,d);},'',null,null,'','',$('i_endtime_3128').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3128"><span class="showtime" id="s_endtime_3128"><input id="i_endtime_3128" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3128',function(d){return setmyDate(2,3128,d);},'',null,null,'',$('i_starttime_3128').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3128">
+          <span class="noname" id="s_sponsor_3128">jackyyin</span>          </td>
+          <td id="t_principal_3128">
+          <span class="noname" id="s_principal_3128">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="imgbox"><img src="planconfig.php_files/collapse.gif" class="col_exp" onclick="collapse();" rval="expand_26_0_14"></span>防沉迷系统接入</td>
+          <td id="t_starttime_3137">&nbsp;</td>
+          <td id="t_endtime_3137">&nbsp;</td>
+          <td id="t_sponsor_3137">
+          &nbsp;          </td>
+          <td id="t_principal_3137">
+          &nbsp;          </td>
+          <td align="center"></td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>业务可运营性验证</td>
+          <td class="starttime" id="t_starttime_3106"><span class="showtime" id="s_starttime_3106"><input id="i_starttime_3106" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3106',function(d){return setmyDate(1,3106,d);},'',null,null,'','',$('i_endtime_3106').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3106"><span class="showtime" id="s_endtime_3106"><input id="i_endtime_3106" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3106',function(d){return setmyDate(2,3106,d);},'',null,null,'',$('i_starttime_3106').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3106">
+          <span class="noname" id="s_sponsor_3106">willstarli</span>          </td>
+          <td id="t_principal_3106" class="principal">
+          <span class="showname" id="s_principal_3106">alvinzheng</span><input style="padding: 0px; float: right;" value="更新" id="b_principal_3106" type="button">          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>可用性设计</td>
+          <td class="starttime" id="t_starttime_3108"><span class="showtime" id="s_starttime_3108"><input id="i_starttime_3108" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3108',function(d){return setmyDate(1,3108,d);},'',null,null,'','',$('i_endtime_3108').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3108"><span class="showtime" id="s_endtime_3108"><input id="i_endtime_3108" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3108',function(d){return setmyDate(2,3108,d);},'',null,null,'',$('i_starttime_3108').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3108">
+          <span class="noname" id="s_sponsor_3108"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3108">
+          <span class="noname" id="s_principal_3108">-</span>          </td>
+          <td align="center">评审活动类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>阶段总结</td>
+          <td class="starttime" id="t_starttime_3109"><span class="showtime" id="s_starttime_3109"><input id="i_starttime_3109" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3109',function(d){return setmyDate(1,3109,d);},'',null,null,'','',$('i_endtime_3109').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3109"><span class="showtime" id="s_endtime_3109"><input id="i_endtime_3109" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3109',function(d){return setmyDate(2,3109,d);},'',null,null,'',$('i_starttime_3109').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3109">
+          <span class="noname" id="s_sponsor_3109"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3109">
+          <span class="noname" id="s_principal_3109">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运营开发侧测试环境搭建</td>
+          <td class="starttime" id="t_starttime_3160"><span class="showtime" id="s_starttime_3160"><input id="i_starttime_3160" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3160',function(d){return setmyDate(1,3160,d);},'',null,null,'','',$('i_endtime_3160').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3160"><span class="showtime" id="s_endtime_3160"><input id="i_endtime_3160" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3160',function(d){return setmyDate(2,3160,d);},'',null,null,'',$('i_starttime_3160').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3160">
+          <span class="noname" id="s_sponsor_3160">jackyyin</span>          </td>
+          <td id="t_principal_3160" class="principal">
+          <span class="showname" id="s_principal_3160">alvinzheng</span><input style="padding: 0px; float: right;" value="更新" id="b_principal_3160" type="button">          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+          <td rowspan="21" align="center">内测</td>          <td><span class="noimgbox"></span>经分系统内测版本开发</td>
+          <td class="starttime" id="t_starttime_3129"><span class="showtime" id="s_starttime_3129"><input id="i_starttime_3129" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3129',function(d){return setmyDate(1,3129,d);},'',null,null,'','',$('i_endtime_3129').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3129"><span class="showtime" id="s_endtime_3129"><input id="i_endtime_3129" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3129',function(d){return setmyDate(2,3129,d);},'',null,null,'',$('i_starttime_3129').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3129">
+          <span class="noname" id="s_sponsor_3129">jackyyin</span>          </td>
+          <td id="t_principal_3129">
+          <span class="noname" id="s_principal_3129">kindanjin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>业务受理系统开发支持</td>
+          <td class="starttime" id="t_starttime_3130"><span class="showtime" id="s_starttime_3130"><input id="i_starttime_3130" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3130',function(d){return setmyDate(1,3130,d);},'',null,null,'','',$('i_endtime_3130').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3130"><span class="showtime" id="s_endtime_3130"><input id="i_endtime_3130" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3130',function(d){return setmyDate(2,3130,d);},'',null,null,'',$('i_starttime_3130').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3130">
+          <span class="noname" id="s_sponsor_3130">jackyyin</span>          </td>
+          <td id="t_principal_3130">
+          <span class="noname" id="s_principal_3130">zoehuang</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>ITIL流程及电子流宣导</td>
+          <td class="starttime" id="t_starttime_3110"><span class="showtime" id="s_starttime_3110"><input id="i_starttime_3110" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3110',function(d){return setmyDate(1,3110,d);},'',null,null,'','',$('i_endtime_3110').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3110"><span class="showtime" id="s_endtime_3110"><input id="i_endtime_3110" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3110',function(d){return setmyDate(2,3110,d);},'',null,null,'',$('i_starttime_3110').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3110">
+          <span class="noname" id="s_sponsor_3110"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3110">
+          <span class="noname" id="s_principal_3110">jemmyli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>服务支持流程实施</td>
+          <td class="starttime" id="t_starttime_3111"><span class="showtime" id="s_starttime_3111"><input id="i_starttime_3111" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3111',function(d){return setmyDate(1,3111,d);},'',null,null,'','',$('i_endtime_3111').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3111"><span class="showtime" id="s_endtime_3111"><input id="i_endtime_3111" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3111',function(d){return setmyDate(2,3111,d);},'',null,null,'',$('i_starttime_3111').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3111">
+          <span class="noname" id="s_sponsor_3111">willstarli</span>          </td>
+          <td id="t_principal_3111">
+          <span class="noname" id="s_principal_3111">jemmyli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>签订服务级别协议（SLA）</td>
+          <td class="starttime" id="t_starttime_3112"><span class="showtime" id="s_starttime_3112"><input id="i_starttime_3112" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3112',function(d){return setmyDate(1,3112,d);},'',null,null,'','',$('i_endtime_3112').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3112"><span class="showtime" id="s_endtime_3112"><input id="i_endtime_3112" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3112',function(d){return setmyDate(2,3112,d);},'',null,null,'',$('i_starttime_3112').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3112">
+          <span class="noname" id="s_sponsor_3112"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3112">
+          <span class="noname" id="s_principal_3112"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>接入运营度量平台（MP）</td>
+          <td class="starttime" id="t_starttime_3113"><span class="showtime" id="s_starttime_3113"><input id="i_starttime_3113" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3113',function(d){return setmyDate(1,3113,d);},'',null,null,'','',$('i_endtime_3113').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3113"><span class="showtime" id="s_endtime_3113"><input id="i_endtime_3113" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3113',function(d){return setmyDate(2,3113,d);},'',null,null,'',$('i_starttime_3113').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3113">
+          <span class="noname" id="s_sponsor_3113"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3113" class="principal">
+          <span class="showname" id="s_principal_3113"><select name="changeselect_3113_2" id="changeselect_3113_2" onchange="selectuser(2,3113,this.value,'')"><option selected="selected" value="">-请选择-</option><option value="jemmyli">jemmyli</option></select></span><input style="padding: 0px; float: right; display: none;" value="更新" id="b_principal_3113" type="button">          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>正式运营实战演习</td>
+          <td class="starttime" id="t_starttime_3114"><span class="showtime" id="s_starttime_3114"><input id="i_starttime_3114" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3114',function(d){return setmyDate(1,3114,d);},'',null,null,'','',$('i_endtime_3114').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3114"><span class="showtime" id="s_endtime_3114"><input id="i_endtime_3114" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3114',function(d){return setmyDate(2,3114,d);},'',null,null,'',$('i_starttime_3114').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3114">
+          <span class="noname" id="s_sponsor_3114"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3114">
+          <span class="noname" id="s_principal_3114">willstarli</span>          </td>
+          <td align="center">评审活动类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>正式运营准备方案</td>
+          <td class="starttime" id="t_starttime_3115"><span class="showtime" id="s_starttime_3115"><input id="i_starttime_3115" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3115',function(d){return setmyDate(1,3115,d);},'',null,null,'','',$('i_endtime_3115').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3115"><span class="showtime" id="s_endtime_3115"><input id="i_endtime_3115" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3115',function(d){return setmyDate(2,3115,d);},'',null,null,'',$('i_starttime_3115').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3115">
+          <span class="noname" id="s_sponsor_3115"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3115">
+          <span class="noname" id="s_principal_3115">willstarli</span>          </td>
+          <td align="center">评审活动类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>官网内测站建设</td>
+          <td class="starttime" id="t_starttime_3140"><span class="showtime" id="s_starttime_3140"><input id="i_starttime_3140" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3140',function(d){return setmyDate(1,3140,d);},'',null,null,'','',$('i_endtime_3140').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3140"><span class="showtime" id="s_endtime_3140"><input id="i_endtime_3140" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3140',function(d){return setmyDate(2,3140,d);},'',null,null,'',$('i_starttime_3140').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3140">
+          <span class="noname" id="s_sponsor_3140">jackyyin</span>          </td>
+          <td id="t_principal_3140">
+          <span class="noname" id="s_principal_3140">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>营销活动开发</td>
+          <td class="starttime" id="t_starttime_3141"><span class="showtime" id="s_starttime_3141"><input id="i_starttime_3141" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3141',function(d){return setmyDate(1,3141,d);},'',null,null,'','',$('i_endtime_3141').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3141"><span class="showtime" id="s_endtime_3141"><input id="i_endtime_3141" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3141',function(d){return setmyDate(2,3141,d);},'',null,null,'',$('i_starttime_3141').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3141">
+          <span class="noname" id="s_sponsor_3141">jackyyin</span>          </td>
+          <td id="t_principal_3141">
+          <span class="noname" id="s_principal_3141">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运发侧正式运营准备评审</td>
+          <td class="starttime" id="t_starttime_3154"><span class="showtime" id="s_starttime_3154"><input id="i_starttime_3154" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3154',function(d){return setmyDate(1,3154,d);},'',null,null,'','',$('i_endtime_3154').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3154"><span class="showtime" id="s_endtime_3154"><input id="i_endtime_3154" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3154',function(d){return setmyDate(2,3154,d);},'',null,null,'',$('i_starttime_3154').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3154">
+          <span class="noname" id="s_sponsor_3154"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3154">
+          <span class="noname" id="s_principal_3154">jackyyin</span>          </td>
+          <td align="center">评审活动类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运发侧正式运营准备状况Review</td>
+          <td class="starttime" id="t_starttime_3155"><span class="showtime" id="s_starttime_3155"><input id="i_starttime_3155" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3155',function(d){return setmyDate(1,3155,d);},'',null,null,'','',$('i_endtime_3155').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3155"><span class="showtime" id="s_endtime_3155"><input id="i_endtime_3155" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3155',function(d){return setmyDate(2,3155,d);},'',null,null,'',$('i_starttime_3155').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3155">
+          <span class="noname" id="s_sponsor_3155">jackyyin</span>          </td>
+          <td id="t_principal_3155">
+          <span class="noname" id="s_principal_3155">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运管侧阶段总结</td>
+          <td class="starttime" id="t_starttime_3156"><span class="showtime" id="s_starttime_3156"><input id="i_starttime_3156" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3156',function(d){return setmyDate(1,3156,d);},'',null,null,'','',$('i_endtime_3156').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3156"><span class="showtime" id="s_endtime_3156"><input id="i_endtime_3156" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3156',function(d){return setmyDate(2,3156,d);},'',null,null,'',$('i_starttime_3156').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3156">
+          <span class="noname" id="s_sponsor_3156"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3156">
+          <span class="noname" id="s_principal_3156">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>职能化接入</td>
+          <td class="starttime" id="t_starttime_3116"><span class="showtime" id="s_starttime_3116"><input id="i_starttime_3116" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3116',function(d){return setmyDate(1,3116,d);},'',null,null,'','',$('i_endtime_3116').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3116"><span class="showtime" id="s_endtime_3116"><input id="i_endtime_3116" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3116',function(d){return setmyDate(2,3116,d);},'',null,null,'',$('i_starttime_3116').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3116">
+          <span class="noname" id="s_sponsor_3116">willstarli</span>          </td>
+          <td id="t_principal_3116" class="principal">
+          <span class="showname" id="s_principal_3116">alvinzheng</span><input style="padding: 0px; float: right;" value="更新" id="b_principal_3116" type="button">          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>管理端开发（可选）</td>
+          <td class="starttime" id="t_starttime_3131"><span class="showtime" id="s_starttime_3131"><input id="i_starttime_3131" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3131',function(d){return setmyDate(1,3131,d);},'',null,null,'','',$('i_endtime_3131').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3131"><span class="showtime" id="s_endtime_3131"><input id="i_endtime_3131" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3131',function(d){return setmyDate(2,3131,d);},'',null,null,'',$('i_starttime_3131').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3131">
+          <span class="noname" id="s_sponsor_3131">jackyyin</span>          </td>
+          <td id="t_principal_3131">
+          <span class="noname" id="s_principal_3131">asherzhou</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>支付接入</td>
+          <td class="starttime" id="t_starttime_3132"><span class="showtime" id="s_starttime_3132"><input id="i_starttime_3132" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3132',function(d){return setmyDate(1,3132,d);},'',null,null,'','',$('i_endtime_3132').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3132"><span class="showtime" id="s_endtime_3132"><input id="i_endtime_3132" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3132',function(d){return setmyDate(2,3132,d);},'',null,null,'',$('i_starttime_3132').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3132">
+          <span class="noname" id="s_sponsor_3132">jackyyin</span>          </td>
+          <td id="t_principal_3132">
+          <span class="noname" id="s_principal_3132">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>web商城接入</td>
+          <td class="starttime" id="t_starttime_3133"><span class="showtime" id="s_starttime_3133"><input id="i_starttime_3133" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3133',function(d){return setmyDate(1,3133,d);},'',null,null,'','',$('i_endtime_3133').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3133"><span class="showtime" id="s_endtime_3133"><input id="i_endtime_3133" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3133',function(d){return setmyDate(2,3133,d);},'',null,null,'',$('i_starttime_3133').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3133">
+          <span class="noname" id="s_sponsor_3133">jackyyin</span>          </td>
+          <td id="t_principal_3133">
+          <span class="noname" id="s_principal_3133">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>公共组件接入：TQOS/UPS</td>
+          <td class="starttime" id="t_starttime_3142"><span class="showtime" id="s_starttime_3142"><input id="i_starttime_3142" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3142',function(d){return setmyDate(1,3142,d);},'',null,null,'','',$('i_endtime_3142').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3142"><span class="showtime" id="s_endtime_3142"><input id="i_endtime_3142" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3142',function(d){return setmyDate(2,3142,d);},'',null,null,'',$('i_starttime_3142').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3142">
+          <span class="noname" id="s_sponsor_3142">willstarli</span>          </td>
+          <td id="t_principal_3142">
+          <span class="noname" id="s_principal_3142">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>公共组件接入：反外挂</td>
+          <td class="starttime" id="t_starttime_3143"><span class="showtime" id="s_starttime_3143"><input id="i_starttime_3143" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3143',function(d){return setmyDate(1,3143,d);},'',null,null,'','',$('i_endtime_3143').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3143"><span class="showtime" id="s_endtime_3143"><input id="i_endtime_3143" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3143',function(d){return setmyDate(2,3143,d);},'',null,null,'',$('i_starttime_3143').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3143">
+          <span class="noname" id="s_sponsor_3143">willstarli</span>          </td>
+          <td id="t_principal_3143">
+          <span class="noname" id="s_principal_3143">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>Tlog接入和运营需求</td>
+          <td class="starttime" id="t_starttime_3134"><span class="showtime" id="s_starttime_3134"><input id="i_starttime_3134" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3134',function(d){return setmyDate(1,3134,d);},'',null,null,'','',$('i_endtime_3134').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3134"><span class="showtime" id="s_endtime_3134"><input id="i_endtime_3134" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3134',function(d){return setmyDate(2,3134,d);},'',null,null,'',$('i_starttime_3134').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3134">
+          <span class="noname" id="s_sponsor_3134">jackyyin</span>          </td>
+          <td id="t_principal_3134">
+          <span class="noname" id="s_principal_3134">jiyewang</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseover" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>IDIP接入及运营需求</td>
+          <td class="starttime" id="t_starttime_3135"><span class="showtime" id="s_starttime_3135"><input id="i_starttime_3135" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3135',function(d){return setmyDate(1,3135,d);},'',null,null,'','',$('i_endtime_3135').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3135"><span class="showtime" id="s_endtime_3135"><input id="i_endtime_3135" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3135',function(d){return setmyDate(2,3135,d);},'',null,null,'',$('i_starttime_3135').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3135">
+          <span class="noname" id="s_sponsor_3135">jackyyin</span>          </td>
+          <td id="t_principal_3135">
+          <span class="noname" id="s_principal_3135">chaoszheng</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+          <td rowspan="12" align="center">不删档</td>          <td><span class="noimgbox"></span>运营准备状况评估</td>
+          <td class="starttime" id="t_starttime_3117"><span class="showtime" id="s_starttime_3117"><input id="i_starttime_3117" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3117',function(d){return setmyDate(1,3117,d);},'',null,null,'','',$('i_endtime_3117').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3117"><span class="showtime" id="s_endtime_3117"><input id="i_endtime_3117" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3117',function(d){return setmyDate(2,3117,d);},'',null,null,'',$('i_starttime_3117').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3117">
+          <span class="noname" id="s_sponsor_3117"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3117">
+          <span class="noname" id="s_principal_3117">willstarli</span>          </td>
+          <td align="center">评审活动类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>Tlog运营需求</td>
+          <td class="starttime" id="t_starttime_3144"><span class="showtime" id="s_starttime_3144"><input id="i_starttime_3144" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3144',function(d){return setmyDate(1,3144,d);},'',null,null,'','',$('i_endtime_3144').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3144"><span class="showtime" id="s_endtime_3144"><input id="i_endtime_3144" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3144',function(d){return setmyDate(2,3144,d);},'',null,null,'',$('i_starttime_3144').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3144">
+          <span class="noname" id="s_sponsor_3144">jackyyin</span>          </td>
+          <td id="t_principal_3144">
+          <span class="noname" id="s_principal_3144">jiyewang</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>IDIP运营需求</td>
+          <td class="starttime" id="t_starttime_3145"><span class="showtime" id="s_starttime_3145"><input id="i_starttime_3145" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3145',function(d){return setmyDate(1,3145,d);},'',null,null,'','',$('i_endtime_3145').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3145"><span class="showtime" id="s_endtime_3145"><input id="i_endtime_3145" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3145',function(d){return setmyDate(2,3145,d);},'',null,null,'',$('i_starttime_3145').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3145">
+          <span class="noname" id="s_sponsor_3145">jackyyin</span>          </td>
+          <td id="t_principal_3145">
+          <span class="noname" id="s_principal_3145">chaoszheng</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>经分系统开发</td>
+          <td class="starttime" id="t_starttime_3146"><span class="showtime" id="s_starttime_3146"><input id="i_starttime_3146" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3146',function(d){return setmyDate(1,3146,d);},'',null,null,'','',$('i_endtime_3146').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3146"><span class="showtime" id="s_endtime_3146"><input id="i_endtime_3146" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3146',function(d){return setmyDate(2,3146,d);},'',null,null,'',$('i_starttime_3146').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3146">
+          <span class="noname" id="s_sponsor_3146">jackyyin</span>          </td>
+          <td id="t_principal_3146">
+          <span class="noname" id="s_principal_3146">kindanjin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>业务受理系统开发支持</td>
+          <td class="starttime" id="t_starttime_3147"><span class="showtime" id="s_starttime_3147"><input id="i_starttime_3147" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3147',function(d){return setmyDate(1,3147,d);},'',null,null,'','',$('i_endtime_3147').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3147"><span class="showtime" id="s_endtime_3147"><input id="i_endtime_3147" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3147',function(d){return setmyDate(2,3147,d);},'',null,null,'',$('i_starttime_3147').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3147">
+          <span class="noname" id="s_sponsor_3147">jackyyin</span>          </td>
+          <td id="t_principal_3147">
+          <span class="noname" id="s_principal_3147">zoehuang</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>官网建设</td>
+          <td class="starttime" id="t_starttime_3148"><span class="showtime" id="s_starttime_3148"><input id="i_starttime_3148" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3148',function(d){return setmyDate(1,3148,d);},'',null,null,'','',$('i_endtime_3148').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3148"><span class="showtime" id="s_endtime_3148"><input id="i_endtime_3148" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3148',function(d){return setmyDate(2,3148,d);},'',null,null,'',$('i_starttime_3148').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3148">
+          <span class="noname" id="s_sponsor_3148">jackyyin</span>          </td>
+          <td id="t_principal_3148">
+          <span class="noname" id="s_principal_3148">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>营销活动开发</td>
+          <td class="starttime" id="t_starttime_3149"><span class="showtime" id="s_starttime_3149"><input id="i_starttime_3149" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3149',function(d){return setmyDate(1,3149,d);},'',null,null,'','',$('i_endtime_3149').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3149"><span class="showtime" id="s_endtime_3149"><input id="i_endtime_3149" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3149',function(d){return setmyDate(2,3149,d);},'',null,null,'',$('i_starttime_3149').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3149">
+          <span class="noname" id="s_sponsor_3149">jackyyin</span>          </td>
+          <td id="t_principal_3149">
+          <span class="noname" id="s_principal_3149">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>开发侧项目总结</td>
+          <td class="starttime" id="t_starttime_3152"><span class="showtime" id="s_starttime_3152"><input id="i_starttime_3152" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3152',function(d){return setmyDate(1,3152,d);},'',null,null,'','',$('i_endtime_3152').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3152"><span class="showtime" id="s_endtime_3152"><input id="i_endtime_3152" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3152',function(d){return setmyDate(2,3152,d);},'',null,null,'',$('i_starttime_3152').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3152">
+          <span class="noname" id="s_sponsor_3152"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3152">
+          <span class="noname" id="s_principal_3152">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运管侧阶段总结</td>
+          <td class="starttime" id="t_starttime_3153"><span class="showtime" id="s_starttime_3153"><input id="i_starttime_3153" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3153',function(d){return setmyDate(1,3153,d);},'',null,null,'','',$('i_endtime_3153').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3153"><span class="showtime" id="s_endtime_3153"><input id="i_endtime_3153" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3153',function(d){return setmyDate(2,3153,d);},'',null,null,'',$('i_starttime_3153').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3153">
+          <span class="noname" id="s_sponsor_3153"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3153">
+          <span class="noname" id="s_principal_3153">willstarli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>运发侧正式运营准备状况Review</td>
+          <td class="starttime" id="t_starttime_3157"><span class="showtime" id="s_starttime_3157"><input id="i_starttime_3157" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3157',function(d){return setmyDate(1,3157,d);},'',null,null,'','',$('i_endtime_3157').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3157"><span class="showtime" id="s_endtime_3157"><input id="i_endtime_3157" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3157',function(d){return setmyDate(2,3157,d);},'',null,null,'',$('i_starttime_3157').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3157">
+          <span class="noname" id="s_sponsor_3157">jackyyin</span>          </td>
+          <td id="t_principal_3157">
+          <span class="noname" id="s_principal_3157">jackyyin</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>QA业务交接</td>
+          <td class="starttime" id="t_starttime_3158"><span class="showtime" id="s_starttime_3158"><input id="i_starttime_3158" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3158',function(d){return setmyDate(1,3158,d);},'',null,null,'','',$('i_endtime_3158').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3158"><span class="showtime" id="s_endtime_3158"><input id="i_endtime_3158" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3158',function(d){return setmyDate(2,3158,d);},'',null,null,'',$('i_starttime_3158').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3158">
+          <span class="noname" id="s_sponsor_3158"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td id="t_principal_3158">
+          <span class="noname" id="s_principal_3158">jemmyli</span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td><span class="noimgbox"></span>公共组件：接入UPS</td>
+          <td class="starttime" id="t_starttime_3150"><span class="showtime" id="s_starttime_3150"><input id="i_starttime_3150" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_3150',function(d){return setmyDate(1,3150,d);},'',null,null,'','',$('i_endtime_3150').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_3150"><span class="showtime" id="s_endtime_3150"><input id="i_endtime_3150" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_3150',function(d){return setmyDate(2,3150,d);},'',null,null,'',$('i_starttime_3150').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_3150">
+          <span class="noname" id="s_sponsor_3150">willstarli</span>          </td>
+          <td id="t_principal_3150" class="principal">
+          <span class="showname" id="s_principal_3150">alvinzheng</span><input style="padding: 0px; float: right;" value="更新" id="b_principal_3150" type="button">          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+                <tr class="mouseout" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+          <td rowspan="1" align="center">公测</td>          <td><span class="imgbox"><img src="planconfig.php_files/collapse.gif" class="col_exp" onclick="collapse();" rval="expand_64_1_64"></span>公测--流程</td>
+          <td id="t_starttime_6923">&nbsp;</td>
+          <td id="t_endtime_6923">&nbsp;</td>
+          <td id="t_sponsor_6923">
+          &nbsp;          </td>
+          <td id="t_principal_6923">
+          &nbsp;          </td>
+          <td align="center"></td>
+          <td align="center"></td>
+        </tr>
+                <tr style="display: none;" onmouseover="this.className='mouseover'" onmouseout="this.className='mouseout'" height="30">
+                    <td> &nbsp; &nbsp; &nbsp; &nbsp;<span class="noimgbox"></span>测试子流程</td>
+          <td class="starttime" id="t_starttime_7008"><span class="showtime" id="s_starttime_7008"><input id="i_starttime_7008" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_starttime_7008',function(d){return setmyDate(1,7008,d);},'',null,null,'','',$('i_endtime_7008').value);" class="hints calendar" type="text"></span></td>
+          <td class="endtime" id="t_endtime_7008"><span class="showtime" id="s_endtime_7008"><input id="i_endtime_7008" value="请输入日期..." style="width:84px;" onfocus="if(this.value==hint){this.value='';this.className='calendar';}DonYue_Calendar('i_endtime_7008',function(d){return setmyDate(2,7008,d);},'',null,null,'',$('i_starttime_7008').value,'');" class="hints calendar" type="text"></span></td>
+          <td id="t_sponsor_7008">
+          <span class="noname" id="s_sponsor_7008">jemmyli</span>          </td>
+          <td id="t_principal_7008">
+          <span class="noname" id="s_principal_7008"><a href="http://gopmp.cm.com/rights.php?id=72&amp;focusid=25#users_25">请填写QA</a></span>          </td>
+          <td align="center">需求跟进类</td>
+          <td align="center"></td>
+        </tr>
+              </tbody></table>
+    </div>
+  </div>
+  </form>
+<script language="javascript">
+<!--
+function setType(t){
+	location.href='planconfig.php?action=showlist&id='+$('bid').value+'&taskstype='+t;
+}
+var users_array={"1":[],"2":{"3104":["alvinzheng","willstarli"],"3151":["alvinzheng","willstarli"],"3106":["alvinzheng","willstarli"],"3160":["alvinzheng","willstarli"],"3113":["jemmyli"],"3116":["alvinzheng","willstarli"],"3150":["alvinzheng","willstarli"]}};
+var re = /([collapse|expand]+)_(\d+)_(\d+)_(\d+)/i;
+var re2 = /^[\w]_(\w+)_(\d+)$/i;
+var table=$('mytable');
+var hint='请输入日期...';
+ready(function(){
+	var ol=$c('showtime');
+	for(var i in ol){
+		tmp_html = ol[i].innerHTML;
+		class_name='calendar';
+		if(tmp_html.length<=0){
+			tmp_html=hint;
+			class_name='hints calendar'
+		}
+		matches = re2.exec(ol[i].id);
+		//alert(matches);
+		tmp_id='i_'+matches[1]+'_'+matches[2];
+		t=matches[1]=='starttime'?1:2;
+		ol[i].innerHTML='<input type="text" id="'+tmp_id+'" value="'+tmp_html+'" style="width:84px;" onFocus="if(this.value==hint){this.value=\'\';this.className=\'calendar\';}DonYue_Calendar(\''+tmp_id+'\',function(d){return setmyDate('+t+','+matches[2]+',d);},\'\',null,null,\'\','+(t==2?'$(\'i_starttime_'+matches[2]+'\').value':'\'\'')+','+(t==1?'$(\'i_endtime_'+matches[2]+'\').value':'\'\'')+');"'+(class_name!=''?' class="'+class_name+'"':'')+' />';
+	}
+	/*ol=$c('starttime,endtime,showtime,showimg,show_img');
+	_attachEvent(ol,'mouseover',function(){
+		if(is_ie)o=this.event.srcElement;
+		else o=this;
+		matches = re2.exec(o.id);
+		id=parseInt(matches[2]);
+		if(isdefbyid('i_'+matches[1]+'_'+id))$('i_'+matches[1]+'_'+id).style.display='block';
+	});
+	_attachEvent(ol,'mouseout',function(){
+		if(is_ie)o=this.event.srcElement;
+		else o=this;
+		matches = re2.exec(o.id);
+		id=parseInt(matches[2]);
+		if(isdefbyid('i_'+matches[1]+'_'+id))$('i_'+matches[1]+'_'+id).style.display='none';
+	});*/
+	
+	ol=$c('showname');
+	for(var i in ol){
+		matches = re2.exec(ol[i].id);
+		t=matches[1]=='sponsor'?1:2;
+		//alert(users_array[t][matches[2]]);
+		if(isUndefined(users_array[t][matches[2]]))return;
+		dv = ol[i].innerHTML;
+		
+		//添加更新按钮
+		but=document.createElement('input');
+		but.id='b_'+matches[1]+'_'+matches[2];
+		but.type='button';
+		but.value='更新';
+		but.style.padding='0';
+		but.style.cssFloat='right';
+		but.style.styleFloat='right';
+		but.onclick=function(e){
+			e = e?e:window.event;
+			o=is_ie?e.srcElement:e.currentTarget;
+			matches = re2.exec(o.id);
+			showUsersList($('s_'+matches[1]+'_'+matches[2]));
+			o.style.display='none';
+		};
+		insertAfter(but,ol[i]);
+		
+		
+		if(dv.length==''){
+			ul=users_array[t][matches[2]];
+			//alert(ul);
+			str='<select name="changeselect_'+matches[2]+'_'+t+'" id="changeselect_'+matches[2]+'_'+t+'" onchange="selectuser('+t+','+matches[2]+',this.value,\''+dv+'\')"><option value="">-请选择-</option>';// onblur="selectuser('+t+','+matches[2]+',this.value,\''+dv+'\')"
+			for(var j=0; j<ul.length; j++) str+='<option value="'+ul[j]+'"'+(dv==ul[j]?' selected="selected"':'')+'>'+ul[j]+'</option>';
+			str+='</select>';
+			ol[i].innerHTML=str;
+			but.style.display='none';
+		}
+	}
+
+	/*ol=$c('sponsor,principal,showname,show_img2');
+	_attachEvent(ol,'mouseover',userOver);
+	_attachEvent(ol,'mouseout',userOut);*/
+	
+	
+	//折叠子任务
+	for(var i=1,table=$('mytable');i<table.rows.length-1;i++){
+		var img=findtags('img','',table.rows[i]);//.cells[1]
+		if(img.length>0 && img[0].className=='col_exp'){
+			var o=img[0];
+			matches = re.exec(o.getAttribute('rval'));
+			fc=parseInt(matches[3]);
+			sp=parseInt(matches[4]);
+			
+			for(var j=i+1,l=fc+i+1;j<l;j++){
+				if(table.rows[j].style.display!='none'){
+					table.rows[j].style.display='none';
+					rowspan=parseInt(table.rows[sp].cells[0].getAttribute('rowspan'));
+					if(rowspan>1){
+						if(is_ie)table.rows[sp].cells[0].setAttribute('rowspan',rowspan-1);
+						else table.rows[sp].cells[0].attributes['rowspan'].value=rowspan-1;
+					}
+				}
+			}
+			o.src='images/collapse.gif';
+			o.onclick=function(){expand()};
+			if(is_ie)o.setAttribute('rval', 'expand_'+matches[2]+'_'+fc+'_'+sp);
+			else o.attributes['rval'].value='expand_'+matches[2]+'_'+fc+'_'+sp;
+		}
+	}
+	
+	/*
+	//显示下拉框
+	for(var i in users_array){
+		var v=(i==1?'sponsor_':'principal_');
+		for(var j in users_array[i]){
+			t=trim($('s_'+v+j).innerHTML);
+			if(t.length<=0)showUsersList($('p_'+v+j));
+		}
+	}
+	*/
+
+	
+	DYMSGBOX.Show('<div id="msg">正在载入中...</div><iframe width="340" scrolling="auto" height="200" frameborder="0" src="showPlanEditLog.php?action=miniPlanLogForm&id=72" allowtransparency="true" id="popFrame" style="display:none;">-</iframe>',{
+		closeTime:0,//关闭自动关闭
+		title:'更新记录信息 &nbsp;[<a href="javascript:showMsg(72);">更多记录</a>]'
+	});
+});
+function showFrame(){
+	$('msg').style.display='none';
+	$('popFrame').style.display='';
+}
+function setmyDate(t,i,d){
+	var id_str='';
+	var o_id_str='';
+	if(t==1){
+		id_str='i_starttime_'+i;
+		o_id_str='i_endtime_'+i;
+	}else{
+		id_str='i_endtime_'+i;
+		o_id_str='i_starttime_'+i;
+	}
+	var to=$(id_str);
+	var oto=$(o_id_str);
+	var dd=oto.value;
+	var d1 = new Date(d.replace(/\-/g, "\/"));
+	var d2 = new Date(dd.replace(/\-/g, "\/"));
+	if(t==1 && d2<d1){
+		alert('时间出错!');
+		to.value=hint;
+		to.className='hints calendar';
+		return false;
+	}else if(t==2 && d2>d1){
+		alert('时间出错!');
+		to.value=hint;
+		to.className='hints calendar';
+		return false;
+	}
+	ajaxGetResult('planconfig.php?action=settime&id='+i+'&type='+t+'&value='+d,'XML','', function(s){
+		if(s!='succeed'){
+			alert('更新时间失败!');
+			to.value=hint;
+			to.className='hints calendar';
+		}else{
+			//alert('更新时间成功!');
+			if(d==''){
+				to.value=hint;
+				to.className='hints calendar';
+			}else{
+				to.value=d;
+				to.className='calendar';
+			}
+		}
+	});
+}
+
+function userOver(){
+	if(is_ie)o=this.event.srcElement;
+	else o=this;
+	//re = /^[\w]_(\w+)_(\d+)$/i;
+	matches = re2.exec(o.id);
+	id=parseInt(matches[2]);
+	if(isdefbyid('p_'+matches[1]+'_'+id))$('p_'+matches[1]+'_'+id).style.display='block';
+}
+function userOut(){
+	if(is_ie)o=this.event.srcElement;
+	else o=this;
+	//re = /^[\w]_(\w+)_(\d+)$/i;
+	matches = re2.exec(o.id);
+	id=parseInt(matches[2]);
+	if(isdefbyid('p_'+matches[1]+'_'+id))$('p_'+matches[1]+'_'+id).style.display='none';
+}
+function showUsersList(o){
+	matches = re2.exec(o.id);
+	//t=1;
+	//if(matches[1]=='principal')t=2;
+	t=matches[1]=='sponsor'?1:2;
+	//dv=$('s_'+matches[1]+'_'+matches[2]).innerHTML;
+	dv=o.innerHTML;
+	ul=users_array[t][matches[2]];
+	var str='<select name="changeselect_'+matches[2]+'_'+t+'" id="changeselect_'+matches[2]+'_'+t+'" onblur="selectuser('+t+','+matches[2]+',this.value,\''+dv+'\')" onchange="selectuser('+t+','+matches[2]+',this.value,\''+dv+'\')">';//<option value="">-请选择-</option>
+	for(var i=0; i<ul.length; i++) str+='<option value="'+ul[i]+'"'+(dv==ul[i]?' selected="selected"':'')+'>'+ul[i]+'</option>';
+	str+='</select>';
+	o.innerHTML=str;
+	//var to=$('t_'+matches[1]+'_'+matches[2]);
+	//_detachEvent(to,'mouseover',userOver);
+	//_detachEvent(to,'mouseout',userOut);
+	//to.innerHTML=str;
+}
+function selectuser(t,v,u,dv){
+	//$('changeselect_'+v+'_'+t).onblur=function(){};
+	//$('changeselect_'+v+'_'+t).onchange=function(){};
+	if(t==1)tstr='sponsor';
+	else tstr='principal';
+	//var to=$('t_'+tstr+'_'+v);
+	if(u==dv){
+		//html='<span class="showname" id="s_'+tstr+'_'+v+'">'+u+'</span><img src="images/yw.png" title="点击修改" alt="点击修改" onclick="showUsersList(this)" id="p_'+tstr+'_'+v+'" class="show_img2" style="display: none;">';
+		//to.innerHTML=html;
+		return;
+	}else{
+		ajaxGetResult('planconfig.php?action=setuser&id='+v+'&type='+t+'&value='+u,'XML','',function(s){
+			if(s!='succeed'){
+				alert('更新用户失败!');
+				$('changeselect_'+v+'_'+t).value=dv;
+			}else{
+				//alert('更新用户成功!');
+				//html='<span class="showname" id="s_'+tstr+'_'+v+'">'+u+'</span><img src="images/yw.png" title="点击修改" alt="点击修改" onclick="showUsersList(this)" id="p_'+tstr+'_'+v+'" class="show_img2" style="display: none;">';
+				
+				if(u!=''){
+					$('s_'+tstr+'_'+v).innerHTML=u;
+					//alert(users_array[t][v]);
+					//alert();
+					if(users_array[t][v].length>1)$('b_'+tstr+'_'+v).style.display='';
+				}
+			}
+		});
+	}
+	//_attachEvent(to,'mouseover',userOver);
+	//_attachEvent(to,'mouseout',userOut);
+}
+function collapse(){//合并 i,cc,fc
+	e = window.event || arguments.callee.caller.arguments[0];
+	o=is_ie?e.srcElement:e.currentTarget;
+	matches = re.exec(o.getAttribute('rval'));
+	i=parseInt(matches[2]);
+	fc=parseInt(matches[3]);
+	sp=parseInt(matches[4]);
+	for(var j=i+1,l=fc+i+1;j<l;j++){
+		table.rows[j].style.display='none';
+		rowspan=parseInt(table.rows[sp].cells[0].getAttribute('rowspan'));
+		if(rowspan>1){
+			if(is_ie)table.rows[sp].cells[0].setAttribute('rowspan',rowspan-1);
+			else table.rows[sp].cells[0].attributes['rowspan'].value=rowspan-1;
+		}
+		img=findtags('img','',table.rows[j]);//.cells[1]
+		if(img.length>0 && img[0].className=='col_exp'){
+			img=img[0];
+			matches2 = re.exec(img.getAttribute('rval'));
+			if(matches2[1]=='expand')j+=parseInt(matches2[3]);
+		}
+	}
+	o.src='images/collapse.gif';
+	o.onclick=function(){expand()};
+	if(is_ie)o.setAttribute('rval','expand_'+i+'_'+fc+'_'+sp);
+	else o.attributes['rval'].value='expand_'+i+'_'+fc+'_'+sp;
+}
+function expand(){//展开
+	e = window.event || arguments.callee.caller.arguments[0];
+	o=is_ie?e.srcElement:e.currentTarget;
+	matches = re.exec(o.getAttribute('rval'));
+	i=parseInt(matches[2]);
+	fc=parseInt(matches[3]);
+	sp=parseInt(matches[4]);
+	for(var j=i+1,l=fc+i+1;j<l;j++){
+		table.rows[j].style.display='';
+		img=findtags('img','',table.rows[j]);//.cells[1]
+		if(img.length>0 && img[0].className=='col_exp'){
+			img=img[0];
+			matches = re.exec(img.getAttribute('rval'));
+			if(matches[1]=='expand')j+=parseInt(matches[3]);
+		}
+		rowspan=parseInt(table.rows[sp].cells[0].getAttribute('rowspan'));
+		
+		//table.rows[sp].cells[0].attributes['rowspan'].value=rowspan+1;
+		
+		if(is_ie)table.rows[sp].cells[0].setAttribute('rowspan',rowspan+1);
+		else table.rows[sp].cells[0].attributes['rowspan'].value=rowspan+1;
+	}
+	o.src='images/expand.gif';
+	o.onclick=function(){collapse()};
+	
+	if(is_ie)o.setAttribute('rval','collapse_'+i+'_'+fc+'_'+sp);
+	else o.attributes['rval'].value='collapse_'+i+'_'+fc+'_'+sp;
+	//o.attributes['rval'].value='collapse_'+i+'_'+fc+'_'+sp;
+}
+function taskRun(tmodel,tstep,id,tid){
+	if(tstep != 'cview'){
+		var d='',dd='',u1='',u2='';
+		if(isdefbyid('i_starttime_'+tid)){
+			//alert('aa');
+			d=trim($('i_starttime_'+tid).value);
+			dd=trim($('i_endtime_'+tid).value);
+		}else{
+			d=trim($('t_starttime_'+tid).innerHTML);
+			dd=trim($('t_endtime_'+tid).innerHTML);
+		}
+		
+		//alert(d);
+		if(isdefbyid('changeselect_'+tid+'_1')){
+			
+			v=$('changeselect_'+tid+'_1').value;
+			if(v!='')$('s_sponsor_'+tid).innerHTML=v;
+			else{
+				alert('请选择发起人!');
+				return;
+			}
+		}
+		
+		if(isdefbyid('changeselect_'+tid+'_2')){
+			v=$('changeselect_'+tid+'_2').value;
+			if(v!='')$('s_principal_'+tid).innerHTML=v;
+			else{
+				alert('请选择负责人!');
+				return;
+			}
+			//if(v!='')$('s_sponsor_'+tid).innerHTML=v;
+			//selectuser(2,tid,v,v);
+		}
+		//return false;
+		
+		if(isdefbyid('s_sponsor_'+tid)){
+			u1=trim($('s_sponsor_'+tid).innerHTML);
+			u2=trim($('s_principal_'+tid).innerHTML);
+		}else{
+			
+		}
+		//alert(u2);
+	
+		if(d==''||dd==''||u1==''||u2==''||d==hint||dd==hint||u1.indexOf('href=')>=0||u2.indexOf('href=')>=0){
+			alert('计划开始时间、完成时间、发起人与负责人都不能为空!');
+			return;
+		}
+		var d1 = new Date(d.replace(/\-/g, "\/"));
+		var d2 = new Date(dd.replace(/\-/g, "\/"));
+		if(d1>d2){
+			alert('计划开始时间与完成时间日期错误!');
+			return;
+		}
+	}
+	//location.href='planconfig.php?action='+action+'&id='+id+'&tid='+tid;
+	//location.href=action+'.php?id='+id+'&tid='+tid;
+	location.href='tasks_doing.php?tmodel='+tmodel+'&tstep='+tstep+'&id='+id+'&tid='+tid;
+}
+function showMsg(id){
+	url='showPlanEditLog.php?id='+id;
+	DYBOX.show('<div id="msg2">正在载入中...</div><iframe width="700" scrolling="no" height="335" frameborder="0" src="'+url+'" allowtransparency="true" id="popFrame2" style="display:none;">-</iframe>',{
+		width:			245,
+		fixtype:		0,
+		have_top:		true,
+		have_button:	true,
+		canDrag:		true,
+		shield:			true,
+		title:			'计划变更日志',
+		OKButton:		false,
+		CancelButton:	false
+	});
+}
+function showFrame2(){
+	$('msg2').style.display='none';
+	$('popFrame2').style.display='';
+}
+function setBox(w,h){
+	DYBOX.SetWidth(w);
+	DYBOX.SetHeight(h);
+	$('popFrame2').style.height=h+'px';
+}
+//-->
+</script>
+</div>
+<div class="gediv"></div>
+<div class="foot"><span></span></div>
+
+
+<div class="zdsmsgbox zdsmsgbox_show" style="z-index: 999; width: 342px; height: 229px;" id="zdsmsgbox"><div class="msgHead"><div class="msgTitle" id="msgTitle">更新记录信息 &nbsp;[<a href="javascript:showMsg(72);">更多记录</a>]</div><div class="msgButton" id="msgTop"><span class="msgBtn msgClose" id="msgClosevod"></span><span class="msgBtn msgShow" id="msgShowvod" style="display:none"></span><span class="msgBtn msgHide" id="msgHidevod"></span></div></div><div class="msgContent" id="msgContent"><div style="display: none;" id="msg">正在载入中...</div><iframe src="planconfig.php_files/showPlanEditLog.htm" allowtransparency="true" id="popFrame" style="" frameborder="0" height="200" scrolling="auto" width="340">-</iframe></div></div></body></html>

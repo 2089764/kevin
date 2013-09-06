@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GOPMP</title>
+<script type="text/javascript" src="GOPMP_files/common.js"></script>
+<link href="GOPMP_files/gopmp.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+<!--
+var timeout = 500;
+var closetimer= 0;
+var ddmenuitem = 0;
+ready(function(){
+	li=findtags('li','',$('menu'));
+	for(var i=0;i<li.length;i++){
+		ul=findtags('ul','',li[i]);
+		if(ul.length>0){
+			li[i].onmouseover=function(){
+				mcancelclosetime();
+				if(ddmenuitem) ddmenuitem.style.display='none';
+				ul=findtags('ul','',this);
+				ddmenuitem=ul[0];
+				ddmenuitem.style.display='block';
+				_attachEvent(document,'click',mclose);
+				lis=findtags('li','',ddmenuitem);
+				w=0;
+				for(var j=0,jl=lis.length;j<jl;j++)w+=12*(lis[j].firstChild.innerHTML.length)+18;
+				r=getPoint(this)[0]-getPoint($('menu'))[0]+w;
+				l=(50-w/2);
+				if(r>737)l=730-r;
+				ul[0].style.width=w+"px";
+				ul[0].style.left=l+"px";
+			}
+			li[i].onmouseout=function(){mclosetime();}
+		}
+	}
+	li=findtags('li','',$('ywrw'));
+	for(var i=0;i<li.length;i++){
+		ul=findtags('ul','',li[i]);
+		if(ul.length>0){
+			li[i].onmouseover=function(){mcancelclosetime();if(ddmenuitem) ddmenuitem.style.display='none';ul=findtags('ul','',this);ddmenuitem=ul[0];ddmenuitem.style.display='block';}
+			li[i].onmouseout=function(){mclosetime();}
+		}
+	}
+});
+function mclose(){
+	if(ddmenuitem) ddmenuitem.style.display='none';
+	_detachEvent(document,'click',mclose);
+}
+function mclosetime(){
+	closetimer = window.setTimeout(mclose, timeout);
+}
+function mcancelclosetime(){
+	if(closetimer){
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+//-->
+</script>
+</head>
+<body>
+<div class="top1">
+  <div>
+    <span class="left">您好，<span id="loginusername">windyqiu</span>  &nbsp;【<a href="http://gopmp.cm.com/logout.php" style="color:#f00;">退出</a>】</span>
+    <span class="right">
+      <ul id="ywrw">
+        <li><a class="head_home_link" href="http://gopmp.cm.com/">首页</a></li>
+        <li><a class="head_yw_link" href="#"><em>我的业务</em></a>
+          <ul><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=1">QQ仙灵(H2)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=2">QQ封神记(QQ封神记)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=3">糖之物语(糖果世界)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=4">QQ乐团(Rock Planet)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=5">夺宝船长(Black Flag)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=6">乐斗派(乐斗派)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=7">QQ爱之花园(QQ爱之花园)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=8">花儿对对碰(Bloomy)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=9">QQ黄金矿工(QQ黄金矿工)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=10">圣犬帕拉(圣犬帕拉)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=11">斗战神(斗战神)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=12">炫舞2(炫舞2)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=13">球球堂(DOD)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=14">魔偶给我冲(精灵星球)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=15">疾风之刃(Apple)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=16">刀剑2(刀剑2)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=17">九界(九界)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=18">就要K歌(就要K歌)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=19">逆战(火力突击)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=20">枪神纪(TPS)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=21">天刹(修罗sura)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=22">炫斗之王(炫斗之王)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=23">烈焰行动(烈焰行动)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=24">生化战场(WOZ)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=25">NBA2K(NBA2K)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=26">轩辕传奇(轩辕传奇)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=27">战争前线(战争前线)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=28">DGAME(DGAME)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=29">宠物牧场(DWeb1)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=30">机甲旋风(AI)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=31">将魂(将魂)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=32">Q游记(米亚之光)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=33">文明争霸(HUG)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=34">星之物语(星之物语)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=35">纵横九州(八阵图)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=36">QQ特工(QQ特工)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=37">QQ水浒(QQ水浒)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=38">Q宠大乐斗(大乐斗)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=39">王朝霸域(王朝霸域)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=40">九州三国(九州三国)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=41">AppleJuice(AppleJuice)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=42">天堂2(天堂2)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=43">上古世纪(上古世纪)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=44">QQ九仙(QQ九仙)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=45">星魂传说(星魂传说)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=46">功夫西游(GFXY)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=47">魔幻大陆(魔幻大陆)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=48">夜店之王(夜店之王)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=49">弹道轨迹(TNT)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=50">洛克王国(洛克)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=51">大乐斗II(大乐斗II)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=52">英雄岛(英雄岛)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=53">QQ华夏(QQ华夏)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=54">QQ宝贝(宝贝)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=55">QQ仙境(QQ仙境)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=56">三国了没(热血三国杀)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=57">QQ天堂岛(天堂岛)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=58">大明龙权(大明)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=59">QQ飞车(飞车)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=60">CODOL(CODO)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=61">Fashion Avenue(Fashion Avenue)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=62">RGAME(RGAME)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=63">QSGAME(QSGAME)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=64">超级明星(超级明星)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=65">飞行战记(NX)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=66">剑灵(剑灵)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=67">万王之王3(万王之王3)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=68">御龙在天(御龙在天)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=69">Bumping Bears(Bears)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=70">灭世(灭世)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=71">三国来了(三国来了)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=72">3366(3366)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=73">C9(C9)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=74">QQ宠物企鹅(企鹅)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=75">QQ三国(QQ三国)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=76">QQ堂(QQ堂)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=77">QQ西游(QQ西游)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=78">QQ仙侠传(仙侠传)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=79">小熊梦工厂(小熊)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=80">QQ炫舞(炫舞)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=81">QQ音速(音速)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=82">QQ游戏(QQ游戏)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=83">QT语音(QTalk)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=84">宝石总动员(QQ宝石)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=85">楚河汉界(楚河汉界)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=86">穿越火线(CF)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=87">地下城与勇士(DNF)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=88">烽火战国(烽火)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=89">欢乐王国(欢乐王国)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=90">幻想(FO)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=91">幻想世界(幻世)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=92">绿色征途(LSZT)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=93">摩登城市(摩登城市)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=94">七雄争霸(七雄)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=95">三国塔防-魏传(三国塔防-魏传)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=96">丝路英雄(丝路)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=97">天堂(天堂)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=98">小白大作战(小白)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=99">寻侠-独代(寻侠)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=100">寻仙(寻仙)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=101">英雄联盟(LOL)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=102">战地之王(AVA)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=103">自由幻想(FFO)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=104">Cannon Jump(Jump)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=105">Top Girl(Top Girl)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=106">Tower Town(Tower Town)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=107">画皮II(画皮II)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=108">机器人崛起(Robot Rising)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=109">Lotus(Lotus)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=110">MHFC(MHFC)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=111">洛克ios版(洛克ios版)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=112">手机Q宠大乐斗(手机乐斗)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=113">自由足球(自由足球)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=114">CafeLife(Cafelife)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=115">ParadiseLife(ParadiseLife)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=116">万神之怒COG繁体(COG繁体中文)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=117">动物大爆炸(zoo)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=118">华夏1(华夏1)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=119">霸三国online(OGAME)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=120">QQ游戏社区(QQYXSQ)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=121">Elgard(Elgard)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=122">萌仙(萌仙)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=123">神魔录(神魔录)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=124">逐鹿中原(ZLZY)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=125">微胖(微胖)</a></li><li><a href="http://gopmp.cm.com/businessinfo.php?action=showinfo&amp;id=126">江湖笑(jhx)</a></li></ul>        </li>
+        <li><a class="head_rw_link" href="#"><em>我的任务</em></a>
+          <ul>
+            <li><a href="http://gopmp.cm.com/myschedule.php">我的待办</a></li>
+            <li><a href="http://gopmp.cm.com/myfinish.php">我的已办</a></li>
+            <li><a href="http://gopmp.cm.com/project.php?showtype=myschedule">重点项目待办</a></li>
+          </ul>
+        </li>
+        <li><a class="head_zs_link" href="#">知识库</a></li>
+        <li><a class="head_fw_link" href="#">服务帮助</a></li>
+        <li><a class="head_lx_link" target="_blank" href="http://ce.oa.com/GOPMP">联系我们</a></li>
+        <li><a class="head_xt_link" href="#">系统配置</a>
+          <ul><li><a href="http://gopmp.cm.com/phases.php">阶段管理</a></li><li><a href="http://gopmp.cm.com/types.php">任务类型</a></li><li><a href="http://gopmp.cm.com/operations.php">业务类型</a></li><li><a href="http://gopmp.cm.com/tasks.php">任务列表</a></li><li><a href="http://gopmp.cm.com/taskstype.php">任务分类</a></li><li><a href="http://gopmp.cm.com/roles.php">角色管理</a></li><li><a href="http://gopmp.cm.com/pages.php">页面管理</a></li><li><a href="http://gopmp.cm.com/permissions.php">操作管理</a></li><li><a href="http://gopmp.cm.com/rolepageperm.php">权限管理</a></li><li><a href="http://gopmp.cm.com/expert.php">专家团</a></li><li><a href="http://gopmp.cm.com/groupmanager.php">业务小组</a></li><li><a href="http://gopmp.cm.com/msg.php">系统信息</a></li><li><a href="http://gopmp.cm.com/qalist.php">QA列表</a></li><li><a href="http://gopmp.cm.com/resourcetype.php">资源类型</a></li><li><a href="http://gopmp.cm.com/projectstep.php">项目级别</a></li><li><a href="http://gopmp.cm.com/projecttype.php">项目类型</a></li><li><a href="http://gopmp.cm.com/project_back.php">改回草稿</a></li><li><a href="http://gopmp.cm.com/project_gm.php">项目成员</a></li><li><a href="http://gopmp.cm.com/logs.php">日志查看</a></li></ul>        </li><li><a class="head_xt_link" href="#">职能化后台</a>
+          <ul><li><a href="http://gopmp.cm.com/apply_fields.php">业务字段</a></li><li><a href="http://gopmp.cm.com/accessinfo.php">服务列表</a></li><li><a href="http://gopmp.cm.com/apply_users.php">职能化用户</a></li></ul>        </li>      </ul>
+    </span>
+  </div>
+</div>
+<div class="top2">
+  <div class="top2_1">
+    <div class="head_logo left"><a href="http://gopmp.cm.com/" alt="首页" title="首页"></a></div>
+    <div class="head_nav right">
+      <div class="navtopge"></div>
+      <div class="navmenu">
+        <ul id="menu">
+          <li class="noborder"><a href="http://gopmp.cm.com/newbusiness.php">新建业务</a></li><li><a href="#">业务列表</a><ul><li><a href="http://gopmp.cm.com/allBusinesses.php">业务总览</a></li><li><a href="http://gopmp.cm.com/businesses.php">业务信息</a></li><li><a href="http://gopmp.cm.com/rights.php">项目成员</a></li></ul></li><li><a href="http://gopmp.cm.com/planconfig.php">计划管理</a></li><li><a href="#">我的任务</a><ul><li><a href="http://gopmp.cm.com/myschedule.php">我的待办</a></li><li><a href="http://gopmp.cm.com/myfinish.php">我的已办</a></li><li><a href="http://gopmp.cm.com/project.php?showtype=myschedule">重点项目待办任务</a></li></ul></li><li><a href="http://gopmp.cm.com/risk.php">风险管理</a></li><li><a href="http://gopmp.cm.com/report.php">发送报告</a></li><li><a href="http://gopmp.cm.com/planview.php">进度视图</a></li><li><a href="http://gopmp.cm.com/apply_list.php">职能化接入</a></li>        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="top2_2">
+    <div class="head_user left">
+      <div class="head_user_head">
+        <p>新业务: 您现在有【<a href="http://gopmp.cm.com/myschedule.php" style="color:#f00; font-weight:bold;">151</a>】件待办事项</p>
+        <p>重点项目: 您现在有【<a href="http://gopmp.cm.com/project.php?showtype=myschedule" style="color:#f00; font-weight:bold;">5</a>】件待办事项</p>
+      </div>
+      <div class="xinxihead">系统信息栏</div>
+      <div class="head_user_body" id="mymovebox">
+        <div id="mymovebox_c1">
+        <ul><li><a href="javascript:showMsg(8);" alt="系统特性1：业务信息、角色统一管理" title="系统特性1：业务信息、角色统一管理">系统特性1：业务信息、角色统一...</a></li><li><a href="javascript:showMsg(7);" alt="系统特性2：新业务接入活动线上跟进、反馈" title="系统特性2：新业务接入活动线上跟进、反馈">系统特性2：新业务接入活动线上...</a></li><li><a href="javascript:showMsg(6);" alt="系统特性3：业务接入过程透明可视" title="系统特性3：业务接入过程透明可视">系统特性3：业务接入过程透明可...</a></li><li><a href="javascript:showMsg(5);" alt="系统特性4：未完成活动自动提醒" title="系统特性4：未完成活动自动提醒">系统特性4：未完成活动自动提醒</a></li><li><a href="javascript:showMsg(4);" alt="系统特性5：线上发送报告" title="系统特性5：线上发送报告">系统特性5：线上发送报告</a></li><li><a href="javascript:showMsg(3);" alt="系统特性6：重点项目立项审批" title="系统特性6：重点项目立项审批">系统特性6：重点项目立项审批</a></li><li><a href="javascript:showMsg(2);" alt="GoPMP一期系统发布，欢迎体验" title="GoPMP一期系统发布，欢迎体验">GoPMP一期系统发布，欢迎体验</a></li></ul>        </div>
+        <div id="mymovebox_c2">
+        <ul><li><a href="javascript:showMsg(8);" alt="系统特性1：业务信息、角色统一管理" title="系统特性1：业务信息、角色统一管理">系统特性1：业务信息、角色统一...</a></li><li><a href="javascript:showMsg(7);" alt="系统特性2：新业务接入活动线上跟进、反馈" title="系统特性2：新业务接入活动线上跟进、反馈">系统特性2：新业务接入活动线上...</a></li><li><a href="javascript:showMsg(6);" alt="系统特性3：业务接入过程透明可视" title="系统特性3：业务接入过程透明可视">系统特性3：业务接入过程透明可...</a></li><li><a href="javascript:showMsg(5);" alt="系统特性4：未完成活动自动提醒" title="系统特性4：未完成活动自动提醒">系统特性4：未完成活动自动提醒</a></li><li><a href="javascript:showMsg(4);" alt="系统特性5：线上发送报告" title="系统特性5：线上发送报告">系统特性5：线上发送报告</a></li><li><a href="javascript:showMsg(3);" alt="系统特性6：重点项目立项审批" title="系统特性6：重点项目立项审批">系统特性6：重点项目立项审批</a></li><li><a href="javascript:showMsg(2);" alt="GoPMP一期系统发布，欢迎体验" title="GoPMP一期系统发布，欢迎体验">GoPMP一期系统发布，欢迎体验</a></li></ul>        </div>
+      </div>
+      <script language="javascript">
+	  <!--
+	  var demo=$('mymovebox');
+	  var demo1=$('mymovebox_c1');
+	  if(demo1.offsetHeight>demo.offsetHeight){
+		  var demo2=$('mymovebox_c2');
+		  demo2.innerHTML=demo1.innerHTML;
+		  var m=demo2.offsetTop-demo1.offsetTop;
+		  function Marquee(){
+			  if(demo1.offsetHeight<=demo.scrollTop)demo.scrollTop-=demo1.offsetHeight;
+			  else demo.scrollTop++;
+		  }
+		  var MyMar=setInterval(Marquee,50);
+		  demo.onmouseover=function(){clearInterval(MyMar)}
+		  demo.onmouseout=function(){MyMar=setInterval(Marquee,50)}
+	  }
+	  //-->
+	  </script>
+    </div>
+    <div class="head_wel right">
+	<script type="text/javascript" src="GOPMP_files/zdsimgbox.js"></script>
+<script language="javascript">
+<!--
+DYIMGBOX.show({
+	imgSrc:'upload/index_top/gopmp1.jpg|upload/index_top/gopmp2.jpg',
+	imgLink:'',
+	imgTitle:'',
+	width:672,
+	height:195,
+	btnWidth:21,
+	btnHeight:21,
+	btnFontSize:12
+});
+//-->
+</script><div id="DYIMGBOX" style="position:absolute;width:672px; height:195px;overflow:hidden;"><div id="DYIMG_Pic" style="text-align: center; opacity: 0.7;"><img style="border:none;" src="GOPMP_files/gopmp2.jpg" height="195" width="672"></div><div id="DYIMG_Title" style=" position:absolute; left:5px;bottom:10px;"></div><div id="DYIMG_Link" style=" position:absolute; right:10px; bottom:10px;"><a id="DYIMG_a_0" style="float: left; font-family: Arial; font-size: 12px; margin-left: 2px; color: rgb(255, 255, 255); text-decoration: none; width: 21px; height: 21px; text-align: center; line-height: 21px; background-image: url(&quot;images/seicon.png&quot;);" href="javascript:void(0);">1</a><a id="DYIMG_a_1" style="float: left; font-family: Arial; font-size: 12px; margin-left: 2px; color: rgb(255, 255, 255); text-decoration: none; width: 21px; height: 21px; text-align: center; line-height: 21px; background-image: url(&quot;images/goicon.png&quot;);" href="javascript:void(0);">2</a></div></div></div>
+  </div>  <div class="top2_3">当前位置：首页<span style=" font-weight:bold;"></span></div>
+</div>
+<div class="contentbody">
+<script type="text/javascript" src="GOPMP_files/zdsinfobox.js"></script>
+<script type="text/javascript" src="GOPMP_files/ajax.js"></script>
+<link href="GOPMP_files/zdsjs.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.zdsinfo_content{}
+.msgbox{ padding:10px;}
+.msghead{ overflow:hidden; color:#1274BF; font-weight:bold; margin-bottom:7px; line-height:25px;}
+.subject{}
+.date{}
+.msgbody{ overflow:auto; height:200px;}
+-->
+</style>
+  <div class="keybutbox">
+    <ul>
+      <li class="key_zt"><a href="http://gopmp.cm.com/project/">专题项目</a></li>
+      <li class="key_zc"><a href="http://gopmp.cm.com/newregbuse.php">注册新业务</a></li>
+      <li class="key_cy"><a href="http://gopmp.cm.com/rights.php">指定成员</a></li>      <li class="key_jh"><a href="http://gopmp.cm.com/planconfig.php">制定计划</a></li>      <li class="key_cl"><a href="http://gopmp.cm.com/myschedule.php">处理任务</a></li>      <li class="key_gz"><a href="http://gopmp.cm.com/planview.php">关注进度</a></li>      <li class="key_ck"><a href="http://gopmp.cm.com/report.php">查看报告</a></li>      <li class="key_jl"><a href="http://gopmp.cm.com/risk.php">记录风险</a></li>    </ul>
+  </div>
+  <div class="moremsg">
+    <div class="xtsm">
+      <div class="xtsm_head">系统说明</div>
+      <ul>
+        <li>1<a href="#">系统使命：解放我们的双手！释放我们的时间！新业务接入，Easy Go！</a></li>
+        <li>2<a href="#">一手包办新业务接入流程，自动匹配白皮书活动，避免活动遗漏或缺失；</a></li>
+        <li>3<a href="#">线上跟进活动执行，点对点承接任务，流程进展可视；</a></li>
+        <li>4<a href="#">报告内容自动拉取，分担日常例行汇报工作；</a></li>
+        <li>5<a href="#">不用VSS，SVN来回切换，线上统一入口来搞定。</a></li>
+      </ul>
+    </div>
+    <div class="cylj">
+      <div class="cylj_head">常用链接</div>
+      <ul>
+        <li>1<a href="http://ieod.ied.com/" target="_blank">互娱运营部门户</a></li>
+        <li>2<a href="http://cc.ied.com/" target="_blank">配置中心</a></li>
+        <li>3<a href="http://iflow.ied.com/requirementmanage/web/index.aspx" target="_blank">需求管理系统</a></li>
+        <li>4<a href="http://rel.ied.com/" target="_blank">发布管理系统</a></li>
+        <li>5<a href="http://iflow.ied.com/netbuild/web/index.aspx" target="_blank">网站建设电子流</a></li>
+      </ul>
+    </div>
+  </div>
+  
+<script language="javascript">
+<!--
+function showMsg(id){
+	DYBOX.show('<img border="0" align="absmiddle" alt="loading..." src="images/loading.gif"> <span style="line-height:20px; color:blue; font-weight:bold;">数据载入中...</span>',{
+		height:	20,
+		width:	120,
+		fixtype:0,
+		shield:	true
+	});
+	ajaxGetResult('msg.php?action=getMsg&id='+id,'JSON','',function(v){
+		if(isUndefined(v['subject'])){
+			if(!isUndefined(v['error']))alert(v['error']);
+			else alert('数据载入出错!');
+			return;
+		}
+		DYBOX.show('<div class="msgbox"><div class="msghead"><span class="subject left">'+v['subject']+'</span><span class="date right">'+v['datetime']+'</span></div><div class="msgbody">'+v['content']+'</div></div>',{
+			height:		260,
+			width:		450,
+			fixtype:	0,
+			title:		'系统公告',
+			have_top:	true,
+			have_button:true,
+			OKButtonText:'关闭',	
+			CancelButton:false,
+			canDrag:	true,
+			shield:		true
+		});
+	});
+}
+
+//-->
+</script>
+</div>
+<div class="gediv"></div>
+<div class="foot"><span></span></div>
+
+
+<div style="z-index: 998; opacity: 0.3; display: none;" id="zdsinfobg" class="zdsinfobg"></div><div style="display: none; z-index: 999; top: 249px; left: 416px;" id="zdsinfobox" class="zdsinfobox"></div></body></html>
