@@ -1,7 +1,7 @@
 ﻿<?php  
 $typeNu = $_GET["nu"];  //快递单号
 $curl = curl_init();
-curl_setopt ($curl, CURLOPT_URL, 'http://www.kuaidi100.com/autonumber/auto?num='.$typeNu);
+curl_setopt ($curl, CURLOPT_URL, 'http://www.xxx.com/autonumber/auto?num='.$typeNu);
 curl_setopt ($curl, CURLOPT_HEADER,0);
 curl_setopt ($curl, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt ($curl, CURLOPT_USERAGENT,$_SERVER['HTTP_USER_AGENT']);
@@ -12,7 +12,7 @@ $infos = json_decode($infos);
 $typeCom = $infos[0]->comCode;  
 
  
-$url ='http://www.kuaidi100.com/query?type='.$typeCom .'&postid='.$typeNu.'&id=1&valicode='; 
+$url ='http://www.xxxx.com/query?type='.$typeCom .'&postid='.$typeNu.'&id=1&valicode='; 
 
 //优先使用curl模式发送数据
 if (function_exists('curl_init') == 1){ 
